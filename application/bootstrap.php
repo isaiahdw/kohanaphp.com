@@ -1,6 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 //-- Environment setup --------------------------------------------------------
+// Just giving a try...
 
 /**
  * Set the default time zone.

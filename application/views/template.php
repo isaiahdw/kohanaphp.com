@@ -10,8 +10,6 @@
 <?php foreach ($scripts as $script)
 	echo HTML::script($script), "\n" ?>
 
-	<script type="text/javascript" src="http://www.arbormotion.com/ujenga/media/vendor/jquery/jquery.min.js"></script>
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#rotator ul li h3").click(function() {

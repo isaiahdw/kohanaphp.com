@@ -43,7 +43,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'kohanaphp.com') !== FALSE)
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => Kohana::$environment === 'live' ? '/' : '/ko3web/',
+	'base_url'   => Kohana::$environment === 'live' ? '/' : '/kohanaphp.com/',
 	'caching'    => Kohana::$environment === 'live',
 	'profile'    => Kohana::$environment !== 'live',
 	'index_file' => FALSE,

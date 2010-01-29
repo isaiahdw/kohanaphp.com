@@ -10,9 +10,21 @@
 <?php foreach ($scripts as $script)
 	echo HTML::script($script), "\n" ?>
 
+	<script type="text/javascript" src="http://www.arbormotion.com/ujenga/media/vendor/jquery/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#rotator ul li h3").click(function() {
+				$('#rotator h3').removeClass('active');
+				$(this).addClass('active');
+				$('#rotator .content').removeClass('active');
+				$(this).parent().children('.content').addClass('active');
+				return false;
+			});
+		});
+	</script>
 </head>
 <body>
-
 <div id="header">
 	<div class="container">
 		<?php echo HTML::anchor('', HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>
@@ -31,7 +43,7 @@
 <div id="content">
 	<div class="wrapper">
 		<div class="container">
-			<?php echo $content ?> 
+			<?php echo $content ?>
 		</div>
 	</div>
 </div>
@@ -46,25 +58,10 @@
 			</p>
 		</div>
 		<div class="discussions feed span-8">
-			<h6 class="caps top">Latest Discussions</h6>
-			<ol>
-				<?php echo View::factory('template/feed', array(
-					'feed'  => 'http://forum.kohanaphp.com/search.php?PostBackAction=Search&Advanced=1&Type=Comments&Feed=RSS2',
-					'limit' => 5,
-					'more'  => 'More discussions',
-				)) ?>
-			</ol>
+
 		</div>
 		<div class="changes feed span-8 suffix-1 last">
-			<h6 class="caps top">Latest Development</h6>
-			<ol>
-				<?php echo View::factory('template/feed', array(
-					'feed'  => 'http://dev.kohanaphp.com/activity.atom?show_changesets=1',
-					'limit' => 5,
-					'link'  => 'id',
-					'more'  => 'More development',
-				)) ?>
-			</ol>
+
 		</div>
 	</div>
 </div>

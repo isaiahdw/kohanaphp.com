@@ -26,4 +26,10 @@ class Controller_Page extends Controller_Website {
 			->render();
 	}
 
+	public function action_download()
+	{
+		$this->template->title = 'Download';
+		$this->template->content = View::factory('pages/download');
+	}
+
 } // End Page

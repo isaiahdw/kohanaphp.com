@@ -15,7 +15,7 @@ $config['ko2'] = array(
 	'release' => array(
 		'2.4.0' => array(
 			'version'           => '2.4.0',
-			'codename'          => '',
+			'codename'          => 'No Name',
 			'released'          => '02/14/2010',
 			'download'          => 'http://dev.kohanaphp.com/attachments/download/1355/kohana-v2.4.zip',
 			'documentation'     => 'http://kohanaphp.com/docs/24',
@@ -59,7 +59,6 @@ $config['ko2'] = array(
 	),
 );
 
-
 // 3.x branch
 $config['ko3'] = array(
 	'development' => array(
@@ -77,6 +76,5 @@ $config['ko3'] = array(
 	),
 	'archive' => array(),
 );
-
 
 return $config;

@@ -68,7 +68,7 @@
 				<li>Advanced Routing</li>
 				<li>Rapid development cycle.</li>
 			</ul>
-			<a href="" class="button">Version <?php echo $versions['ko3']['version'] ?></a>
+			<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="button">Version <?php echo $versions['ko3']['version'] ?></a>
 		</div>
 		<div class="span-6 last">
 			<h4>Kohana 2.x</h4>
@@ -78,7 +78,7 @@
 				<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
 				<li>Long Term Support</li>
 			</ul>
-			<a href="" class="button">Version <?php echo $versions['ko2']['version'] ?></a>
+			<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="button">Version <?php echo $versions['ko2']['version'] ?></a>
 		</div>
 	</div>
 	<div id="sidebar" class="span-7 last">

@@ -69,10 +69,12 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 #testimonials #testimonial div.who a { color:#999999; }
 
 #download {}
+	#download #starting_download { margin: 10px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -opera-border-radius: 8px; -khtml-border-radius: 8px; background-color: #FFE79F; padding: 8px; font-size: 1.2em; }
 	#download .version { margin: 10px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -opera-border-radius: 8px; -khtml-border-radius: 8px; background-color: #F1F8DB; padding: 10px;}
 		#download .version .right { margin-left: 80px; }
 		#download .version h1 { border-bottom: 1px solid rgba(255,124,0,0.4); font-size: 1.1em; }
 		#download .version h2 { font-size: 1.3em; }
+		#download .version h2 .released { color: #666666; }
 
 
 #footer { padding: 1em 0; background: #00262f; color: #eee; text-shadow: #00262f 0.1em 0.1em 1px; font-size: 0.9em; }

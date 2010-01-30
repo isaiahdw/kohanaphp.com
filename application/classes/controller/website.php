@@ -8,6 +8,8 @@ abstract class Controller_Website extends Controller_Template {
 
 		if ($this->auto_render)
 		{
+			$this->template->meta_tags = array();
+
 			$this->template->styles = array(
 					'media/css/print.css'  => 'print',
 					'media/css/screen.css' => 'screen',

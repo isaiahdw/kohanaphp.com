@@ -36,7 +36,21 @@ class Controller_Page extends Controller_Website {
 
 	public function action_download()
 	{
+		$this->template->content->download_url = FALSE;
 
+		$versions = Kohana_Config::instance()->load('kohana');
+
+		if ($version = Arr::get($_GET, 'get'))
+		{
+			if (($requested_version = self::multi_array_key_exists($version, $versions)) !== FALSE)
+			{
+				// Try to start the download
+				$this->template->content->download_url = Arr::get($requested_version, 'download');
+				$this->template->meta_tags[] = array('http-equiv' => 'refresh', 'content' => '2; '.$requested_version['download']);
+			}
+		}
+
+		$this->template->content->versions = $versions;
 	}
 
 	public function action_documentation()
@@ -52,6 +66,32 @@ class Controller_Page extends Controller_Website {
 	public function action_development()
 	{
 
+	}
+
+	public function action_team()
+	{
+
+	}
+
+	public function action_help()
+	{
+		
+	}
+
+	protected function multi_array_key_exists($needle, $haystack)
+	{
+		foreach ($haystack as $key => $value)
+		{
+			if ($needle === $key)
+				return $value;
+
+			if (is_array($value))
+			{
+				if (($value = self::multi_array_key_exists($needle, $value)) !== FALSE)
+					return $value;
+			}
+		}
+		return FALSE;
 	}
 
 } // End Page

@@ -10,6 +10,9 @@
 <?php foreach ($scripts as $script)
 	echo HTML::script($script), "\n" ?>
 
+<?php foreach ($meta_tags as $meta)
+	echo '<meta'.HTML::attributes($meta).' />' ?>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#rotator ul li h3").click(function() {
@@ -21,6 +24,7 @@
 			});
 		});
 	</script>
+
 </head>
 <body>
 <div id="header">

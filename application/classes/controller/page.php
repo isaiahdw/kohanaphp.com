@@ -28,8 +28,8 @@ class Controller_Page extends Controller_Website {
 	public function action_home()
 	{
 		$kohana = Kohana_Config::instance()->load('kohana');
-		$versions['ko2'] = current($kohana['ko2']['current']);
-		$versions['ko3'] = current($kohana['ko3']['current']);
+		$versions['ko2'] = current($kohana['ko2']['release']);
+		$versions['ko3'] = current($kohana['ko3']['release']);
 
 		$this->template->content->versions = $versions;
 	}
@@ -75,7 +75,7 @@ class Controller_Page extends Controller_Website {
 
 	public function action_help()
 	{
-		
+
 	}
 
 	protected function multi_array_key_exists($needle, $haystack)

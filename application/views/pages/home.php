@@ -57,42 +57,36 @@
 	<hr />
 </div>
 <div class="span-23 prefix-1">
-	<div class="downloads span-15">
+	<div class="downloads span-14">
 		<h2>Getting Started</h2>
-		<p>Kohana has a couple different versions to choose from. Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-		<div class="span-7 suffix-1">
-			<h3>Kohana 3.0.3</h3>
+		<p>Kohana has a couple different versions to choose from. <a href="">Which versions should I use?</a></p>
+		<div class="span-6 suffix-1 border-right">
+			<h4>Kohana 3.x</h4>
 			<ul>
 				<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
 				<li>Flexible file system structure</li>
 				<li>Advanced Routing</li>
 				<li>Rapid development cycle.</li>
 			</ul>
-			<ul class="options">
-				<li class="last"><a class="download" href="/kohanaphp.com/">Download</a></li>
-			</ul>
+			<a href="" class="button">Version <?php echo $versions['ko3']['version'] ?></a>
 		</div>
-		<div class="span-7 last">
-			<h3>Kohana 2.4.0</h3>
+		<div class="span-6 last">
+			<h4>Kohana 2.x</h4>
 			<ul>
 				<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
 				<li>Powerful event handler</li>
 				<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
 				<li>Long Term Support</li>
 			</ul>
-			<ul class="options">
-				<li class="download last"><a href="/kohanaphp.com/">Download</a></li>
-				<li class="learn first"><a href="/kohanaphp.com/">Learn More...</a></li>
-			</ul>
+			<a href="" class="button">Version <?php echo $versions['ko2']['version'] ?></a>
 		</div>
 	</div>
-	<div id="sidebar" class="span-6 last">
+	<div id="sidebar" class="span-7 last">
 		<div class="news">
 			<h3>News From Kohana</h3>
 			<ul>
-				<li><a href="#">Kohana Joins Software Free...</a></li>
+				<li><a href="#">Kohana Joins the Software Freedom...</a></li>
 				<li><a href="#">Kohana 2.4.0 Released</a></li>
-				<li><a href="#">New Kohana Website</a></li>
 				<li><a href="#">New Kohana Website</a></li>
 				<li><a href="#">New Kohana Website</a></li>
 				<li><a href="#">New Kohana Website</a></li>

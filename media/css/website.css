@@ -35,7 +35,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		#menu li.first { padding-left: 0.5em; border-left: 0; }
 		#menu li.last { border-right: 0; }
 			#menu li a { display: block; height: 32px; line-height: 32px; vertical-align: middle; padding: 0 0.5em; letter-spacing: 0.13em; text-decoration: none; /*font-weight: bold;*/ color: #efefef; text-shadow: #113c32 0.1em 0.1em 1px; }
-			#menu li a:hover { color: #fff; text-shadow: #111 0.1em 0.1em 1px; }
+			#menu li a:hover { color: #fff; text-shadow: #111 0.1em 0.1em 1px; background-color: #57766F; }
 
 #content { background: #f1f8db url(../img/content.png) center top repeat-x; }
 	#content .wrapper { min-height: 390px; padding-top: 1em; background: transparent url(../img/wrapper.png) center top no-repeat; }
@@ -48,13 +48,13 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	#content a:active { text-decoration: none; }
 	#content .built img { border: solid 1px #10382f; }
 	#content .showcase div { height: 130px; overflow: hidden; }
-	#content .showcase h4 { border-bottom: 1px solid #F1F8DB; background:transparent url(../img/icons/check.png) no-repeat scroll 0 0; line-height:16px; padding-left:20px; }
-	#content .downloads { border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; -opera-border-radius:8px; -khtml-border-radius:8px; background-color: #F1F8DB; padding: 8px;}
+	#content .showcase h4 { border-bottom: 1px solid #F1F8DB; background: transparent url(../img/icons/check.png) no-repeat scroll 0 0; line-height: 16px; padding-left:20px; }
+	#content .downloads { border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -opera-border-radius: 8px; -khtml-border-radius: 8px; background-color: #F1F8DB; padding: 8px;}
 	#content .downloads ul { list-style: none; margin: 0pt; padding: 0pt; }
-	#content .downloads ul.options { margin: 0.5em 0 0; list-style: none; }
-		#content .downloads .options li { display: inline; float: left; margin-bottom: 4px; padding: 3px 0.5em 3px 0; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; -opera-border-radius:8px; -khtml-border-radius:8px; background-color: #113C32; }
-			#content .downloads .options li a { display: block; height: 22px; line-height: 22px; vertical-align: middle; padding: 0 0.5em; letter-spacing: 0.13em; text-decoration: none; color: #efefef; }
-			#content .downloads .options li a.download { background: transparent url(../img/icons/download_box.png) no-repeat; padding-left: 30px; }
+			#content .downloads h4 { margin: 0pt; }
+			#content .downloads .border-right { border-right: 1px solid rgba(255,124,0,0.4); }
+			#content .downloads a.button { margin: 6px; color: #F78900; font-size: 1.2em; line-height: 35px; background:url(../img/download_button.png) no-repeat 0px 0px; display: block; width: 100px; height: 20px; padding: 15px 20px 10px 45px; text-decoration: none;}
+			#content .downloads a.button:hover { background:url(../img/download_button.png) no-repeat 0px -45px; }
 
 #sidebar { border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; -opera-border-radius:8px; -khtml-border-radius:8px; background-color: #77c244; padding: 8px;}
 	#content .news ul { list-style: none; margin: 0pt; padding: 0pt; }
@@ -69,7 +69,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 #testimonials #testimonial div.who a { color:#999999; }
 
 #download {}
-	#download .version { margin: 10px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -opera-border-radius: 8px; -khtml-border-radius: 8px; background-color: #F1F8DB; padding: 8px;}
+	#download .version { margin: 10px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -opera-border-radius: 8px; -khtml-border-radius: 8px; background-color: #F1F8DB; padding: 10px;}
 		#download .version .right { margin-left: 80px; }
 		#download .version h1 { border-bottom: 1px solid rgba(255,124,0,0.4); font-size: 1.1em; }
 		#download .version h2 { font-size: 1.3em; }

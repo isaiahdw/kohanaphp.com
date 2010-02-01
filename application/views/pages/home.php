@@ -2,53 +2,56 @@
 	<h1>How is Kohana Different?</h1>
 	<p>Kohana is a <strong>PHP 5 framework</strong> that uses the <strong>Model View Controller</strong> architectural pattern. It aims to be <strong>secure</strong>, <strong>lightweight</strong>, and <strong>easy</strong> to use.
 	Although Kohana uses many common design patterns and concepts found in other frameworks, there are some things that make Kohana stand out:</p>
-	<div id="rotator">
-		<ul>
+	
+	<div id="rotator_div">
+		<ul id="pager">
 			<li>
-				<h3 class="active"><a href="#">Community Driven</a></h3>
-				<div class="content active">
-					<img class="addborder left" src="<?php echo URL::base(TRUE) ?>/media/img/overview_community.png" alt="Kohana Community" />
-					<h4>Community Driven</h4>
-					<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions. Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
-					<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
-				</div>
+				<h3><a href="#">Community Driven</a></h3>
 			</li>
 			<li>
 				<h3><a href="#">Strict PHP 5 OOP</a></h3>
-				<div class="content">
-					<img class="addborder left" src="<?php echo URL::base(TRUE) ?>/media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
-					<h4>Strict PHP 5 <abbr title="Object Oriented Programming">OOP</abbr></h4>
-					<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
-					<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
-				</div>
 			</li>
 			<li>
-				<h3><a href="#">Extremely lightweight</a></h3>
-				<div class="content">
-					<h4>Extremely lightweight</h4>
-					<p>Kohana has no dependencies on PECL extensions or PEAR libraries. </p>
-				</div>
+				<h3><a href="#">Extremely Lightweight</a></h3>
 			</li>
 			<li>
 				<h3><a href="#">Cascading Resources</a></h3>
-				<div class="content">
-					<h4>Cascading Resources</h4>
-					<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
-				</div>
 			</li>
 			<li>
 				<h3><a href="#">Modules</a></h3>
-				<div class="content">
-					<h4>Modules</h4>
-					<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
-				</div>
 			</li>
 			<li>
 				<h3><a href="#">Transparent Extensions</a></h3>
-				<div class="content">
-					<h4>Transparent Extensions</h4>
-					<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
-				</div>
+			</li>
+		</ul>
+		<ul id="rotator">
+			<li class="active">
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
+				<h4>Community Driven</h4>
+				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions. Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
+				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
+			</li>
+			<li>
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
+				<h4>Strict PHP 5 <abbr title="Object Oriented Programming">OOP</abbr></h4>
+				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
+				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
+			</li>
+			<li>
+				<h4>Extremely lightweight</h4>
+				<p>Kohana has no dependencies on PECL extensions or PEAR libraries. </p>
+			</li>
+			<li>
+				<h4>Cascading Resources</h4>
+				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
+			</li>
+			<li>
+				<h4>Modules</h4>
+				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
+			</li>
+			<li>
+				<h4>Transparent Extensions</h4>
+				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
 			</li>
 		</ul>
 	</div>

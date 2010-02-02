@@ -13,15 +13,15 @@
 <?php foreach ($meta_tags as $meta)
 	echo '<meta'.HTML::attributes($meta).' />' ?>
 
-	<script type="text/javascript"> 
+	<script type="text/javascript">
 		$(document).ready(function(){
-			
+
 			// redefine cycle's updateActivePagerLink
-			$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
-				$(pager).find('li').removeClass('active') 
-					.filter('li:eq('+currSlideIndex+')').addClass('active'); 
-			}; 
-			
+			$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) {
+				$(pager).find('li').removeClass('active')
+					.filter('li:eq('+currSlideIndex+')').addClass('active');
+			};
+
 			$('#rotator').cycle({
 				fx:      'fade',
 				speed:   'fast',
@@ -39,12 +39,29 @@
 				},
 
 			});
-			
+
 		});
-	</script> 
+	</script>
 
 </head>
 <body>
+<div id="topnav">
+	<div class="topnav_bar"></div>
+	<div class="topnav_container">
+		<div class="topnav_item home selected">
+			<a href="#"><span>Home</span></a>
+		</div>
+		<div class="topnav_item community">
+			<a href="#"><span>Community</span></a>
+		</div>
+		<div class="topnav_item documentation">
+			<a href="#"><span>Documentation</span></a>
+		</div>
+		<div class="topnav_item development">
+			<a href="#"><span>Development</span></a>
+		</div>
+	</div>
+</div>
 <div id="header">
 	<div class="container">
 		<?php echo HTML::anchor('', HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>

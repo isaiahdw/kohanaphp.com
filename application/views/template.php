@@ -30,7 +30,7 @@
 		<?php echo HTML::anchor('', HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>
 		<div id="menu">
 			<ul>
-				<li class="home first"><?php echo HTML::anchor('', 'Home') ?></li>
+				<li class="home first"><?php echo HTML::anchor('', 'Home', array('class' => 'selected')) ?></li>
 				<li class="download"><?php echo HTML::anchor('download', 'Download') ?></li>
 				<li class="documentation"><?php echo HTML::anchor('documentation', 'Documentation') ?></li>
 				<li class="community"><?php echo HTML::anchor('community', 'Community') ?></li>

@@ -81,7 +81,7 @@
 				<li>Long Term Support</li>
 			</ul>
 			<ul class="options">
-				<li class="download last"><a href="/kohanaphp.com/">Download</a></li>
+				<li class="large button green"><a href="/kohanaphp.com/">Download</a></li>
 				<li class="learn first"><a href="/kohanaphp.com/">Learn More...</a></li>
 			</ul>
 		</div>

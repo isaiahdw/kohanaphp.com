@@ -12,6 +12,8 @@ abstract class Controller_Website extends Controller_Template {
 					'media/css/print.css'  => 'print',
 					'media/css/screen.css' => 'screen',
 					'media/css/website.css' => 'screen',
+					//'media/css/reset.css' => 'screen',
+					//'media/css/styles.css' => 'screen',
 				);
 
 			$this->template->scripts = array(

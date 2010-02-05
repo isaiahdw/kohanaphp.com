@@ -1,50 +1,112 @@
 <div id="download" class="span-22 prefix-1 suffix-1 last">
 	<h1>Get yours today!</h1>
-	<?php if ($downloading): ?>
-		<p>Thank you for downloading Kohana. Your download will start in a few seconds. <a href="#">Hasn't started automatically?</a></p>
+	<?php if ($download_url): ?>
+		<div id="starting_download">
+			<p>Thank you for downloading Kohana. If your download doesn't start in a few seconds, <a href="<?php echo $download_url?>">click here to start it manually</a>.</p>
+		</div>
 	<?php endif; ?>
 	<p class="intro">Kohana has a couple different versions to choose from. Not sure which version is best for you? Check the FAQ for answers</p>
 	<div class="version span-10">
+
 		<h1>Current Release</h1>
-		<h2 class="bottom">v3.0.0 <small class="fancy">"renaissance"</small><br/>
-			<small>Current stable release of the v3.x branch.</small></h2>
-		<p>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/attachments/download/1328/kohana-v3.0.zip', 'Download (zip)') ?>
-			<?php echo HTML::anchor('guide', 'Documentation') ?>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/projects/kohana3/issues', 'Issues') ?>
-			<?php echo HTML::anchor('http://github.com/kohana/kohana', 'Repository') ?>
-		</p>
+		<?php if (count($versions['ko3']['release']) > 0): ?>
+			<?php foreach($versions['ko3']['release'] AS $version => $details): ?>
+				<h2 class="bottom">v<?php echo $version?><?php empty($details['codename']) ? '' : '<small class="fancy">"'.$details['codename'].'"</small>'?></h2>
+				<p>
+					<?php echo empty($details['download']) ? '' : HTML::anchor('download?get='.$version, 'Download (zip)') ?>
+					<?php echo empty($details['status']) ? '' : HTML::anchor($details['status'], 'Status')  ?>
+					<?php echo empty($details['changelog']) ? '' : HTML::anchor($details['changelog'], 'Changelog')  ?>
+					<?php echo empty($details['issues']) ? '' : HTML::anchor($details['issues'], 'Issues')  ?>
+					<?php echo empty($details['repository']) ? '' : HTML::anchor($details['repository'], 'Repository')  ?>
+				</p>
+			<?php endforeach; ?>
+		<?php else: ?>
+			<p>No release versions are available at this time.</p>
+		<?php endif; ?>
+
 		<h1>Development Release</h1>
-		<h3 class="bottom">v3.1.0 <small class="warning">unstable</small><br/>
-			<small>Current beta release of the v3.x branch.</small></h3>
-		<p>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/versions/show/130', 'Status') ?>
-			<?php echo HTML::anchor('http://github.com/kohana/core/tree/unstable', 'Repository') ?>
-		</p>
+		<?php if (count($versions['ko3']['development']) > 0): ?>
+			<?php foreach($versions['ko3']['development'] AS $version => $details): ?>
+				<h2 class="bottom">v<?php echo $version?></h2>
+				<p>
+					<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
+					<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
+					<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
+					<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+					<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
+				</p>
+			<?php endforeach; ?>
+		<?php else: ?>
+			<p>No development versions are available at this time.</p>
+		<?php endif; ?>
+
 		<h1>Release History</h1>
-		<h3 class="bottom">v3.1.0 <small class="warning">unstable</small><br/>
-			<small>Current beta release of the v3.x branch.</small></h3>
-		<p>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/versions/show/130', 'Status') ?>
-			<?php echo HTML::anchor('http://github.com/kohana/core/tree/unstable', 'Repository') ?>
-		</p>
+		<?php if (count($versions['ko3']['archive']) > 0): ?>
+			<?php foreach($versions['ko3']['archive'] AS $version => $details): ?>
+				<h2 class="bottom">v<?php echo $version?></h2>
+				<p>
+					<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
+					<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
+					<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
+					<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+					<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
+				</p>
+			<?php endforeach; ?>
+		<?php else: ?>
+			<p>No previous versions are available at this time.</p>
+		<?php endif; ?>
 	</div>
 	<div class="version right span-10">
-		<h2 class="bottom">v2.3.4 <small class="fancy">"buteo regalis"</small> <small class="warning">final</small><br/>
-			<small>Current stable release of the v2.x branch.</small></h2>
-		<p>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/attachments/download/1355/kohana-v2.3.4.zip', 'Download (zip)') ?>
-			<?php echo HTML::anchor('http://wiki.kohanaphp.com/', 'Documentation') ?>
-			<?php echo HTML::anchor('http://source.kohanaphp.com/svn/kohana2/tags/2.3.4', 'Repository') ?>
-		</p>
-		<h3 class="bottom">v2.4.0 <small class="warning">unstable</small><br/>
-			<small>Current beta release of the v2.x branch.</small></h3>
-		<p>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/attachments/download/1349/kohana-2.4b2.zip', 'Download (zip)') ?>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/versions/show/10', 'Status') ?>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/projects/kohana2/issues', 'Issues') ?>
-			<?php echo HTML::anchor('http://dev.kohanaphp.com/projects/kohana2/wiki/24_Roadmap', 'Changelog') ?>
-			<?php echo HTML::anchor('http://source.kohanaphp.com/svn/kohana2/trunk', 'Repository') ?>
-		</p>
+		<div class="release">
+			<h1>Current Release</h1>
+			<?php if (count($versions['ko2']['release']) > 0): ?>
+				<?php foreach($versions['ko2']['release'] AS $version => $details): ?>
+					<h2 class="bottom">v<?php echo $version?></h2>
+					<p>
+						<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
+						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
+						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
+						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
+					</p>
+				<?php endforeach; ?>
+			<?php else: ?>
+				<p>No release versions are available at this time.</p>
+			<?php endif; ?>
+		</div>
+		<div class="development">
+			<h1>Development Release</h1>
+			<?php if (count($versions['ko2']['development']) > 0): ?>
+				<?php foreach($versions['ko2']['development'] AS $version => $details): ?>
+					<h2 class="bottom">v<?php echo $version?></h2>
+					<p>
+						<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
+						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
+						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
+						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
+					</p>
+				<?php endforeach; ?>
+			<?php else: ?>
+				<p>No development versions are available at this time.</p>
+			<?php endif; ?>
+		</div>
+		<div class="archive">
+			<h1>Release History</h1>
+			<?php if (count($versions['ko2']['archive']) > 0): ?>
+				<?php foreach($versions['ko2']['archive'] AS $version => $details): ?>
+					<h2 class="bottom">v<?php echo $version?></h2>
+					<p>
+						<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
+						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
+						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
+						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
+					</p>
+				<?php endforeach; ?>
+			<?php else: ?>
+				<p>No previous versions are available at this time.</p>
+			<?php endif; ?>
+		</div>
 	</div>
 </div>

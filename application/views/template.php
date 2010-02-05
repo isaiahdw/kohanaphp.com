@@ -7,30 +7,34 @@
 <?php foreach ($styles as $style => $media)
 	echo HTML::style($style, array('media' => $media)), "\n" ?>
 
-<?php foreach ($scripts as $script)
-	echo HTML::script($script), "\n" ?>
+<?php foreach ($meta_tags as $meta)
+	echo '<meta'.HTML::attributes($meta).' />' ?>
 
-	<script type="text/javascript" src="http://www.arbormotion.com/ujenga/media/vendor/jquery/jquery.min.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#rotator ul li h3").click(function() {
-				$('#rotator h3').removeClass('active');
-				$(this).addClass('active');
-				$('#rotator .content').removeClass('active');
-				$(this).parent().children('.content').addClass('active');
-				return false;
-			});
-		});
-	</script>
 </head>
 <body>
+
+<div id="topline">
+	<p>Kohana is a <strong>PHP 5 framework</strong> that uses the <strong>Model View Controller</strong> architectural pattern. It aims to be <strong>secure</strong>, <strong>lightweight</strong>, and <strong>easy</strong> to use.</p>
+</div>
+
 <div id="header">
 	<div class="container">
 		<?php echo HTML::anchor('', HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>
+		
+		<div id="kohanaDwl">
+			<div>
+				<h2>Download Kohana</h2>
+				<small><a href="">Which version should I use ?</a></small>
+			</div>
+			<ul>
+				<li><a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>"><img src="<?php echo URL::base(TRUE) ?>media/img/icons/16/disk.png"/> v<?php echo $versions['ko2']['version'] ?></a></li>
+				<li><a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>"><img src="<?php echo URL::base(TRUE) ?>media/img/icons/16/disk.png"/> v<?php echo $versions['ko3']['version'] ?></a></li>
+			</ul>
+		</div>
+		
 		<div id="menu">
 			<ul>
-				<li class="home first"><?php echo HTML::anchor('', 'Home', array('class' => 'selected')) ?></li>
+				<li class="home first selected"><?php echo HTML::anchor('', 'Home') ?></li>
 				<li class="download"><?php echo HTML::anchor('download', 'Download') ?></li>
 				<li class="documentation"><?php echo HTML::anchor('documentation', 'Documentation') ?></li>
 				<li class="community"><?php echo HTML::anchor('community', 'Community') ?></li>
@@ -50,12 +54,11 @@
 
 <div id="footer">
 	<div class="container">
-		<div class="copyright span-6 prefix-1">
-			<p class="caps top"><?php echo HTML::anchor('', 'Kohana', array('class' => 'logo')) ?>
-				Copyright &copy;2007-2009<br/>
-				All rights reserved<br/>
-				The awesome <?php echo HTML::anchor('team', 'Kohana Team') ?>
-			</p>
+		<div class="copyright">
+			<p><?php echo HTML::anchor('', HTML::image('media/img/kohana_dark.png', array('alt' => 'Kohana: Develop Swiftly')), array('class' => 'logo')) ?></p>
+			<p>Copyright &copy;2007-2009</p>
+			<p>All rights reserved</p>
+			<p>The awesome <?php echo HTML::anchor('team', 'Kohana Team') ?></p>
 		</div>
 		<div class="discussions feed span-8">
 
@@ -65,6 +68,9 @@
 		</div>
 	</div>
 </div>
+
+<?php foreach ($scripts as $script)
+	echo HTML::script($script), "\n" ?>
 
 </body>
 </html>

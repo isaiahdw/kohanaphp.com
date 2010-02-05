@@ -6,6 +6,7 @@
  *
  * @see  http://docs.kohanaphp.com/install#application
  */
+//
 $application = 'application';
 
 /**

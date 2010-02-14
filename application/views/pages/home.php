@@ -1,17 +1,16 @@
 <h1>How is Kohana Different?</h1>
 <p>Kohana is a <strong>PHP 5 framework</strong> that uses the <strong>Model View Controller</strong> architectural pattern. It aims to be <strong>secure</strong>, <strong>lightweight</strong>, and <strong>easy</strong> to use.</p>
 <p>Although Kohana uses many common design patterns and concepts found in other frameworks, there are some things that make Kohana stand out:</p>
-	
+
 <div id="rotator">
 	<ul id="pager">
-		<li><h3><a href="#">Community Driven</a></h3></li>
+		<li><h3><a href="#" class="first">Community Driven</a></h3></li>
 		<li><h3><a href="#">Strict PHP 5 OOP</a></h3></li>
 		<li><h3><a href="#">Extremely Lightweight</a></h3></li>
-		<li><h3><a href="#">Cascading Resources</a></h3></li>
-		<li><h3><a href="#">Modules</a></h3></li>
-		<li><h3><a href="#">Transparent Extensions</a></h3></li>
+		<li><h3><a href="#">Very Flexible</a></h3></li>
+		<li><h3><a href="#">Easy to Learn</a></h3></li>
+		<li><h3><a href="#" class="last">100% UTF-8 compatible</a></h3></li>
 	</ul>
-	
 	<ul id="slides">
 		<li class="active">
 			<img src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
@@ -30,15 +29,15 @@
 			<p>Kohana has no dependencies on PECL extensions or PEAR libraries. </p>
 		</li>
 		<li>
-			<h4>Cascading Resources</h4>
+			<h4>Very Flexible</h4>
+			<p>With a <strong>Cascading File System</strong>, <strong>Modules</strong> and <strong>Transparent Extensions</strong> almost every part of Kohana can be overloaded or extended without editing core system files.</p>
+		</li>
+		<li>
+			<h4>Easy to Learn</h4>
 			<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
 		</li>
 		<li>
-			<h4>Modules</h4>
-			<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
-		</li>
-		<li>
-			<h4>Transparent Extensions</h4>
+			<h4>100% UTF-8 compatible</h4>
 			<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
 		</li>
 	</ul>
@@ -96,7 +95,7 @@
 			</ul>
 		</div>
 	</div>
-	
+
 <div class="span-22 prefix-1">
 	<hr />
 </div>

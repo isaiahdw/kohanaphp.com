@@ -15,7 +15,8 @@
 		<li class="active">
 			<img src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
 			<h4>Community Driven</h4>
-			<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions. Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
+			<p>Kohana is driven by a team of dedicated people that need a framework for fast, powerful solutions.
+			Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 			<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 		</li>
 		<li>

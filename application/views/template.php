@@ -11,23 +11,21 @@
 	<body>
 		<div id="topline">
 			<ul id="quicklinks">
-				<li><a href="http://dev.kohanaphp.com/">Redmine</a></li>
-				<li><a href="http://dev.kohanaphp.com/projects/kohana2/activity">Timeline</a></li>
-				<li><a href="http://dev.kohanaphp.com/projects/kohana2/repository/browse/trunk">Browse Source</a></li>
-				<li><a href="http://dev.kohanaphp.com/projects/kohana2/issues">Tickets</a></li>
-				<li><a href="http://dev.kohanaphp.com/wiki/kohana2/BeADev">Join</a></li>
-				<li><a href="http://www.kohanajobs.com/">Jobs</a></li>
+				<li><a class="active" href="#">Kohana</a></li>
+				<li><a href="#">Community</a></li>
+				<li><a href="#">Development</a></li>
+				<li><a href="#">Documentation</a></li>
 			</ul>
 			<ul id="languages">
-				<li><a href="http://kohanaphp.com/home" class="active"><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/en_US.png" alt="en_US"></a></li>
-				<li><a href="http://kohanaphp.com.br/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/pt_BR.png" alt="pt_BR"></a></li>
-				<li><a href="http://kohanaphp.de/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/de_DE.png" alt="de_DE"></a></li>
-				<li><a href="http://kohanaphp.es/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/es_ES.png" alt="es_ES"></a></li>
-				<li><a href="http://kohanaphp.fr/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/fr_FR.png" alt="fr_FR"></a></li>
-				<li><a href="http://kohanaphp.it/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/it_IT.png" alt="it_IT"></a></li>
-				<li><a href="http://kohanaphp.nl/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/nl_NL.png" alt="nl_NL"></a></li>
-				<li><a href="http://kohanaphp.pl/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/pl_PL.png" alt="pl_PL"></a></li>
-				<li><a href="http://kohanaphp.ru/home" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/ru_RU.png" alt="ru_RU"></a></li>
+				<li><a href="#" class="active"><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/en_US.png" alt="en_US"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/pt_BR.png" alt="pt_BR"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/de_DE.png" alt="de_DE"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/es_ES.png" alt="es_ES"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/fr_FR.png" alt="fr_FR"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/it_IT.png" alt="it_IT"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/nl_NL.png" alt="nl_NL"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/pl_PL.png" alt="pl_PL"></a></li>
+				<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/ru_RU.png" alt="ru_RU"></a></li>
 			</ul>
 		</div>
 		<div id="header">

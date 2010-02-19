@@ -1,15 +1,16 @@
-body { margin: 0; background-color: #1E2E42; font-family: "Lucida Grande",Tahoma,Verdana Arial,sans-serif; font-size: 80%; }
+body { margin: 0; background-color: #1E2E42; font-family: "Lucida Grande",Tahoma,Verdana Arial,sans-serif; font-size: 90%; }
 
 h1 { color:#77C244; font-size:1.8em; margin-bottom:0.6em; }
 h2 { color:#ED890E;  }
 h3 { color:#113C32;  }
 h4 { color:#113C32;  }
 
-#topline { background-color: #1E2E42; color: #436A99; width: 950px; margin: 0px auto; padding: 8px; overflow: hidden; }
+#topline { background-color: #1E2E42; color: #F1F8DB; width: 950px; margin: 0px auto; padding: 8px; overflow: hidden; }
 	#topline ul#quicklinks { display: inline; float: left; }
 	#topline ul#languages { display: inline; float: right; }
 		#topline ul li { padding: 8px 0px; display: inline; }
-		#topline ul li a { color: #fff; }
+		#topline ul li a { color: #F1F8DB; text-decoration: none; }
+		#topline ul li a:hover { color: #EE9323; }
 
 .container { width:950px; margin:0px auto; position:relative; }
 .cleaner { clear:both; visibility:hidden; margin:0; padding:0; border:0; height:0; }
@@ -125,7 +126,7 @@ h4 { color:#113C32;  }
 	}
 	#rotator #slides {
 		float: left;
-		width: 704px;
+		width: 680px;
 	}
 	#rotator #slides h4 {
 		padding: 10px;

@@ -22,24 +22,22 @@
 					.filter('li:eq('+currSlideIndex+')').addClass('active'); 
 			}; 
 			
-			$('#rotator').cycle({
+			$('#slides').cycle({
 				fx:      'fade',
 				speed:   'fast',
 				timeout: '8000',
-				pager:   '#pager',
+				pager:   '#pages',
 				//pagerEvent: 'mouseover',
 				pauseOnPagerHover: true,
 				pagerAnchorBuilder: function(idx,slide) {
 					// return selector string for an existing anchor
-					return '#pager li:eq(' + idx + ') h3 a';
+					return '#pages li:eq(' + idx + ') h3 a';
 				},
 				after: function(curr, next, opts) {
 					var index = opts.currSlide;
-					$('#page li:eq(' + index + ')').addClass('active');
+					$('#pages li:eq(' + index + ')').addClass('active');
 				},
-
 			});
-			
 		});
 	</script> 
 	

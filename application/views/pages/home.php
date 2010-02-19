@@ -2,10 +2,11 @@
 	<h1>How is Kohana Different?</h1>
 	<p>Kohana is a <strong>PHP 5 framework</strong> that uses the <strong>Model View Controller</strong> architectural pattern. It aims to be <strong>secure</strong>, <strong>lightweight</strong>, and <strong>easy</strong> to use.
 	Although Kohana uses many common design patterns and concepts found in other frameworks, there are some things that make Kohana stand out:</p>
-	
-	<div id="rotator_div">
-		<ul id="pager">
-			<li>
+</div>
+<div class="span-22 prefix-1 last">
+	<div class="rotator">
+		<ul id="pages">
+			<li class="first">
 				<h3><a href="#">Community Driven</a></h3>
 			</li>
 			<li>
@@ -20,11 +21,11 @@
 			<li>
 				<h3><a href="#">Easy to Learn</a></h3>
 			</li>
-			<li>
+			<li class="last">
 				<h3><a href="#">100% UTF-8 Compatible</a></h3>
 			</li>
 		</ul>
-		<ul id="rotator">
+		<ul id="slides">
 			<li class="active">
 				<img class="addborder right" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
 				<h4>Community Driven</h4>
@@ -59,37 +60,41 @@
 				<p>All Kohana functions are UTF-8 aware, so Kohana will work anywhere in the world!</p>
 			</li>
 		</ul>
+		<div class="clear"></div>
 	</div>
 </div>
 <div class="span-22 prefix-1">
 	<hr />
 </div>
-<div class="span-23 prefix-1">
-	<div class="downloads span-14">
-		<h2>Getting Started</h2>
-		<p>Kohana has a couple different versions to choose from. <a href="">Which versions should I use?</a></p>
-		<div class="span-6 suffix-1 border-right">
-			<h4>Kohana 3.x</h4>
-			<ul>
-				<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
-				<li>Flexible file system structure</li>
-				<li>Advanced Routing</li>
-				<li>Rapid development cycle.</li>
-			</ul>
-			<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="button">Version <?php echo $versions['ko3']['version'] ?></a>
-		</div>
-		<div class="span-6 last">
-			<h4>Kohana 2.x</h4>
-			<ul>
-				<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
-				<li>Powerful event handler</li>
-				<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
-				<li>Long Term Support</li>
-			</ul>
-			<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="button">Version <?php echo $versions['ko2']['version'] ?></a>
+<div class="span-22 prefix-1">
+	<div class="span-14">
+		<div class="downloads">
+			<h2>Getting Started</h2>
+			<p>Kohana has a couple different versions to choose from. <a href="">Which versions should I use?</a></p>
+			<div class="span-6 suffix-1 border-right">
+				<h4>Kohana 2.x</h4>
+				<ul>
+					<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
+					<li>Powerful event handler</li>
+					<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
+					<li>Long Term Support</li>
+				</ul>
+				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="button">Version <?php echo $versions['ko2']['version'] ?></a>
+			</div>
+			<div class="span-6 last">
+				<h4>Kohana 3.x</h4>
+				<ul>
+					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
+					<li>Flexible file system structure</li>
+					<li>Advanced Routing</li>
+					<li>Rapid development cycle.</li>
+				</ul>
+				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="button">Version <?php echo $versions['ko3']['version'] ?></a>
+			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
-	<div id="sidebar" class="span-7 last">
+	<div class="span-7 prefix-1 last">
 		<div class="news">
 			<h3>News From Kohana</h3>
 			<ul>

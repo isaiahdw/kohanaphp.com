@@ -91,7 +91,17 @@ Route::set('page', '((<lang>/)<action>)', array('lang' => '[a-z]{2}', 'action' =
  * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
  * If no source is specified, the URI will be automatically detected.
  */
-echo Request::instance()
-	->execute()
-	->send_headers()
-	->response;
+try
+{
+	$request = Request::instance()->execute();
+	$request->headers['Content-Length'] = strlen((string)$request->response);
+	$request->send_headers();
+	echo $request->response;
+}
+catch (Exception $e)
+{
+	$url = 'error';
+	$request = Request::factory($url);
+	echo $request->execute()->send_headers()->response;
+	//throw $e;
+}

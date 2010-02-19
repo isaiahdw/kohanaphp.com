@@ -77,6 +77,11 @@ class Controller_Page extends Controller_Website {
 	{
 
 	}
+	
+	public function action_error()
+	{
+		$this->request->status = 404;
+	}
 
 	protected function multi_array_key_exists($needle, $haystack)
 	{

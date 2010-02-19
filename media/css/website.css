@@ -45,7 +45,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	
 	#menu { position:absolute; bottom:0px; right:10px; padding:0; margin:0; }
 		#menu ul { list-style-type:none; float:left; margin:0; padding:0; }
-		#menu ul li { float:left; margin:0; padding:0; }
+		#menu ul li { float:left; margin:0; padding:0; background:#83C018 url(../img/overlay2.png) repeat-x; border:1px solid #76B714; border-right:none; border-bottom:none; }
 		#menu ul li a, #menu ul li a:visited {
 			display:block;
 			padding:10px 20px;
@@ -55,36 +55,31 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 			text-shadow:0.1em 0.1em 1px #76B714;
 			text-transform:uppercase;
 			font-size:12px;
-			background:#83C018 url(../img/overlay2.png) repeat-x;
 			font-weight:bold;
-			border:1px solid #76B714;
-			border-right:none;
-			border-bottom:none;
 			line-height:1em;
 		}
-		#menu ul li.first a {
-			-moz-border-radius: 6px 0px 0px 0px;
-			border-radius: 6px 0px 0px 0px;
+		#menu ul li:hover {
+			background: #76B714 url(../img/overlay2.png) repeat-x;
 		}
-		#menu ul li.last a {
-			border-right:1px solid #76B714;
-			-moz-border-radius:0px 6px 0px 0px;
-			border-radius: 0px 6px 0px 0px;
+		#menu ul li:hover a {
+			color: #2C360B;
 		}
-		#menu ul li.selected a, #menu ul li.selected a:hover {
+		#menu ul li.selected {
 			background:#FCFDF7;
+			border-color:#76B714;
+		}
+		#menu ul li.selected a {
 			color:#EE9323;
 			text-shadow:none;
 		}
-		#menu ul li a:hover {
-			color: #2C360B;
-			background: #76B714 url(../img/overlay2.png) repeat-x;
+		#menu ul li.first {
+			-moz-border-radius: 6px 0px 0px 0px;
+			border-radius: 6px 0px 0px 0px;
 		}
-		#menu ul li a.selected {
-			background-color: #FCFDF7;
-			color: #000;
-			-moz-box-shadow: none;
-			text-shadow: none;
+		#menu ul li.last {
+			border-right:1px solid #76B714;
+			-moz-border-radius:0px 6px 0px 0px;
+			border-radius: 0px 6px 0px 0px;
 		}
 		
 #content { background: #f1f8db url(../img/content.png) center top repeat-x; }
@@ -105,7 +100,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	#content .downloads ul { list-style: none; margin: 0pt; padding: 0pt; }
 	#content .downloads h4 { margin: 0pt; }
 	#content .downloads .border-right { border-right: 1px solid rgba(255,124,0,0.4); }
-	#content .downloads a.button { margin: 6px; color: #F78900; font-size: 1.2em; line-height: 35px; background:url(../img/download_button.png) no-repeat 0px 0px; display: block; width: 100px; height: 20px; padding: 15px 20px 10px 45px; text-decoration: none; }
+	#content .downloads a.button { margin: 6px; color: #F78900; font-size: 1.2em; line-height: 0; background:url(../img/download_button.png) no-repeat 0px 0px; display: block; width: 100px; height: 13px; padding: 32px 20px 0px 45px; text-decoration: none; }
 	#content .downloads a.button:hover { background:url(../img/download_button.png) no-repeat 0px -45px; }
 
 #content .news { border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; -opera-border-radius:8px; -khtml-border-radius:8px; background-color: #77c244; padding: 8px 16px; }
@@ -124,10 +119,10 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	#download #starting_download { margin: 10px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -opera-border-radius: 8px; -khtml-border-radius: 8px; background-color: #FFE79F; padding: 8px; font-size: 1.2em; }
 	#download .version { margin: 10px; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -opera-border-radius: 8px; -khtml-border-radius: 8px; background-color: #F1F8DB; padding: 10px; }
 		#download .version .right { margin-left: 80px; }
-		#download .version h1 { border-bottom: 1px solid rgba(255,124,0,0.4); font-size: 1.1em; }
+		/*#download .version h1 { border-bottom: 1px solid rgba(255,124,0,0.4); font-size: 1.1em; }
 		#download .version h2 { font-size: 1.3em; }
 		#download .version .archive h2 { color: #666666; font-size: 1.1em; }
-		#download .version .development h2 { color: #00262F; font-size: 1.1em; }
+		#download .version .development h2 { color: #00262F; font-size: 1.1em; }*/
 
 
 #footer { padding: 1em 0; background: #00262f; color: #eee; text-shadow: #00262f 0.1em 0.1em 1px; font-size: 0.9em; }
@@ -153,4 +148,3 @@ ul#slides { float:left; width: 600px; padding:0; margin:0; list-style-type:none;
 		#slides li.active { display:block; }
 	#slides li h4 { margin-top:0;}
 	#slides li img { background:#FFF; }
-					

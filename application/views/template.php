@@ -9,37 +9,17 @@
 	
 	<?php foreach ($scripts as $script)
 		echo HTML::script($script), "\n" ?>
+		
+	<!--[if lt IE 8]>
+	<?php echo HTML::script('media/js/IE8.js') ?>
+	<![endif]-->
+	
+	<!--[if IE 6]>
+	<?php echo HTML::script('media/js/DD_belatedPNG_0.0.7a-min.js') ?>
+	<![endif]-->
 	
 	<?php foreach ($meta_tags as $meta)
 		echo '<meta'.HTML::attributes($meta).' />' ?>
-	
-	<script type="text/javascript"> 
-		$(document).ready(function(){
-			
-			// redefine cycle's updateActivePagerLink
-			$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
-				$(pager).find('li').removeClass('active') 
-					.filter('li:eq('+currSlideIndex+')').addClass('active'); 
-			}; 
-			
-			$('#slides').cycle({
-				fx:      'fade',
-				speed:   'fast',
-				timeout: '8000',
-				pager:   '#pages',
-				//pagerEvent: 'mouseover',
-				pauseOnPagerHover: true,
-				pagerAnchorBuilder: function(idx,slide) {
-					// return selector string for an existing anchor
-					return '#pages li:eq(' + idx + ') h3 a';
-				},
-				after: function(curr, next, opts) {
-					var index = opts.currSlide;
-					$('#pages li:eq(' + index + ')').addClass('active');
-				},
-			});
-		});
-	</script> 
 	
 </head>
 <body>

@@ -78,6 +78,11 @@ class Controller_Page extends Controller_Website {
 
 	}
 	
+	public function action_versions()
+	{
+		
+	}
+	
 	public function action_error()
 	{
 		$this->request->status = 404;

@@ -68,10 +68,10 @@
 </div>
 <div class="span-22 prefix-1">
 	<div class="span-14">
-		<div class="downloads">
+		<div class="tan-box downloads">
 			<h2>Getting Started</h2>
-			<p>Kohana has a couple different versions to choose from. <a href="">Which versions should I use?</a></p>
-			<div class="span-6 suffix-1 border-right">
+			<p>Kohana has a couple different versions to choose from. <?php echo html::anchor('versions','Which versions should I use?')?></p>
+			<div class="download-2x">
 				<h4>Kohana 2.x</h4>
 				<ul>
 					<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
@@ -79,9 +79,9 @@
 					<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
 					<li>Long Term Support</li>
 				</ul>
-				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="button">Version <?php echo $versions['ko2']['version'] ?></a>
+				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="download-button">Version <?php echo $versions['ko2']['version'] ?></a>
 			</div>
-			<div class="span-6 last">
+			<div class="download-3x">
 				<h4>Kohana 3.x</h4>
 				<ul>
 					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
@@ -89,13 +89,20 @@
 					<li>Advanced Routing</li>
 					<li>Rapid development cycle.</li>
 				</ul>
-				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="button">Version <?php echo $versions['ko3']['version'] ?></a>
+				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="download-button">Version <?php echo $versions['ko3']['version'] ?></a>
 			</div>
 			<div class="clear"></div>
 		</div>
+		<div id="testimonials">
+			<h3>What Developers are Saying</h3>
+			<div id="testimonial">
+				Kohana is fantastic. I'm in love with PHP again!
+			<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
+		</div>
+	</div>
 	</div>
 	<div class="span-7 prefix-1 last">
-		<div class="news">
+		<div class="news green-box">
 			<h3>News From Kohana</h3>
 			<ul>
 				<li><a href="#">Kohana Joins the Software Freedom...</a></li>
@@ -104,29 +111,19 @@
 				<li><a href="#">New Kohana Website</a></li>
 				<li><a href="#">New Kohana Website</a></li>
 			</ul>
-			<h4>Stay Informed</h4>
+			<h3>Stay Informed</h3>
 			<ul>
 				<li><a id="rss_feed" href="#">RSS News Feed</a></li>
 				<li id="email_sub">Updates by Email</li>
 				<li id="follow_twitter">Follow Us on Twitter</li>
 			</ul>
+			<h3>You Can Help</h3>
+			<p>If you use Kohana and find it worth something, please consider donating. Your donations will be directly used to cover the costs of maintaining Kohana.</p>
+			<a href="">Donate button goes here</a>
 		</div>
 	</div>
 </div>
+
 <div class="span-22 prefix-1">
 	<hr />
-</div>
-<div class="span-22 prefix-1">
-	<div id="testimonials" class="span-16 first">
-		<h3>What Developers are Saying</h3>
-		<div id="testimonial">
-			Kohana is fantastic. I'm in love with PHP again!
-			<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
-		</div>
-		<strong>“</strong>
-	</div>
-	<div id="help" class="span-6 prefix-2 last">
-		<h3>You Can Help</h3>
-		<p>If you use Kohana and find it worth something, please consider donating. Your donations will be directly used to cover the costs of maintaining Kohana.</p>
-	</div>
 </div>

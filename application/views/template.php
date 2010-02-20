@@ -11,11 +11,7 @@
 		echo HTML::script($script), "\n" ?>
 		
 	<!--[if lt IE 8]>
-	<?php echo HTML::script('media/js/IE8.js') ?>
-	<![endif]-->
-	
-	<!--[if IE 6]>
-	<?php echo HTML::script('media/js/DD_belatedPNG_0.0.7a-min.js') ?>
+	<?php echo HTML::script('media/js/IE8.min.js') ?>
 	<![endif]-->
 	
 	<?php foreach ($meta_tags as $meta)
@@ -25,8 +21,8 @@
 <body>
 	<div id="topline">
 		<ul id="quicklinks">
-			<li><a class="active" href="#">Kohana</a></li>
-			<li><a href="#">Community</a></li>
+			<li><a class="active" href="http://kohanaphp.com">Kohana</a></li>
+			<li><a href="http://forum.kohanaphp.com/">Community</a></li>
 			<li><a href="#">Development</a></li>
 			<li><a href="#">Documentation</a></li>
 		</ul>

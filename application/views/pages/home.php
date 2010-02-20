@@ -27,35 +27,35 @@
 		</ul>
 		<ul id="slides">
 			<li class="active">
-				<img class="addborder right" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
 				<h4>Community Driven</h4>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions. Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 			</li>
 			<li>
-				<img class="addborder right" src="<?php echo URL::base(TRUE) ?>media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
 				<h4>Strict PHP 5 <abbr title="Object Oriented Programming">OOP</abbr></h4>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 			</li>
 			<li>
-				<img class="addborder right" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Extremely Lightweight" />
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Extremely Lightweight" />
 				<h4>Extremely Lightweight</h4>
 				<p>Kohana has no dependencies on PECL extensions or PEAR libraries.</p>
 				<p>The code base is lean and mean, so it's easy to find your way around.</p>
 			</li>
 			<li>
-				<img class="addborder right" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Very Flexible" />
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Very Flexible" />
 				<h4>Very Flexible</h4>
 				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.  Modules can be added or created, which add functionility.  You can also transparently extend any class if you need something different.</p>
 			</li>
 			<li>
-				<img class="addborder right" src="<?php echo URL::base(TRUE) ?>media/img/overview_learn.png" alt="Easy to Learn" />
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_learn.png" alt="Easy to Learn" />
 				<h4>Easy to Learn</h4>
 				<p>Kohana was well thought out, and is very easy to learn.  There is great documentation, and if you get stuck, you can ask for help on the forums or in IRC.</p>
 			</li>
 			<li>
-				<img class="addborder right" src="<?php echo URL::base(TRUE) ?>media/img/overview_utf8.png" alt="UTF-8 Compatible" />
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_utf8.png" alt="UTF-8 Compatible" />
 				<h4>100% UTF-8 Compatible</h4>
 				<p>All Kohana functions are UTF-8 aware, so Kohana will work anywhere in the world!</p>
 			</li>

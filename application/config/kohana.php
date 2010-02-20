@@ -100,4 +100,39 @@ $config['ko3'] = array(
 	'archive' => array(),
 );
 
+$config['languages'] = array(
+	'en' => array(
+		'name'=>'English',
+		'flag'=>'en_US',
+	),
+	'pt' => array(
+		'name'=>'Português',
+		'flag'=>'pt_BR',
+	),
+	'de' => array(
+		'name'=>'Deutsch',
+		'flag'=>'de_DE',
+	),
+	'es' => array(
+		'name'=>'Español',
+		'flag'=>'es_ES',
+	),
+	'fr' => array(
+		'name'=>'Français',
+		'flag'=>'fr_FR',
+	),
+	'it' => array(
+		'name'=>'Italiano',
+		'flag'=>'it_IT',
+	),
+	'pl' => array(
+		'name'=>'Polski',
+		'flag'=>'pl_PL',
+	),
+	'ru' => array(
+		'name'=>'Русский',
+		'flag'=>'ru_RU',
+	),
+);
+
 return $config;

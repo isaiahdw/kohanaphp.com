@@ -42,6 +42,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'kohanaphp.com') !== FALSE)
  * - boolean  profile     enable or disable internal profiling               TRUE
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
+
 Kohana::init(array(
 	'base_url'   => Kohana::$environment === 'live' ? '/' : '/kohanaphp.com/',
 	'caching'    => Kohana::$environment === 'live',
@@ -85,6 +86,7 @@ Route::set('page', '((<lang>/)<action>)', array('lang' => '[a-z]{2}', 'action' =
 	->defaults(array(
 		'controller' => 'page',
 		'action'     => 'home',
+		'lang'       => null,
 	));
 
 /**
@@ -100,8 +102,22 @@ try
 }
 catch (Exception $e)
 {
-	$url = 'error';
-	$request = Request::factory($url);
-	echo $request->execute()->send_headers()->response;
+	Request::instance()->status = 404;
+	Request::instance()->send_headers();
+	echo View::factory('template',array(
+		'title' => 'Error',
+		'content' => View::factory('pages/error'),
+		'meta_tags' => array(),
+		'styles' => array(
+			'media/css/print.css'  => 'print',
+			'media/css/screen.css' => 'screen',
+			'media/css/website.css' => 'screen',
+		),
+		'scripts' => array(
+			'media/js/jquery-1.3.2.min.js',
+			'media/js/website.js',
+			'media/js/jquery.cycle.min.js',
+		),
+	));
 	//throw $e;
 }

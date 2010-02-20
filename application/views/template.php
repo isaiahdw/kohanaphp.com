@@ -27,15 +27,9 @@
 			<li><a href="#">Documentation</a></li>
 		</ul>
 		<ul id="languages">
-			<li><a href="#" class="active"><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/en_US.png" alt="en_US"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/pt_BR.png" alt="pt_BR"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/de_DE.png" alt="de_DE"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/es_ES.png" alt="es_ES"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/fr_FR.png" alt="fr_FR"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/it_IT.png" alt="it_IT"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/nl_NL.png" alt="nl_NL"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/pl_PL.png" alt="pl_PL"></a></li>
-			<li><a href="#" class=""><img width="16" height="11" src="http://kohanaphp.com/media/img/flags/ru_RU.png" alt="ru_RU"></a></li>
+			<?php foreach (Kohana::config('kohana')->languages as $lang => $inf): ?>
+				<li><?php echo html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))) ?><li>
+			<?php endforeach; ?>
 		</ul>
 	</div>
 	<div id="header">

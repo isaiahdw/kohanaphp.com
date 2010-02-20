@@ -10,6 +10,47 @@ class Controller_Page extends Controller_Website {
 	{
 		parent::before();
 
+		// Check for lang param
+		$this->lang = $this->request->param('lang');
+		$languages = Kohana::config('kohana')->languages;
+		
+		// If no lang param, check for lang cookie
+		if ($this->lang == null)
+		{
+			$this->lang = Cookie::get('kohanaphp-lang','');
+		}
+		
+		// If Lang is still null, try the ACCEPT_LANGUAGE http header:
+		if ($this->lang == null)
+		{
+			foreach ($this->request->accept_lang() as $lang => $priority )
+			{
+				if (Arr::get($languages,$lang,null))
+				{
+					$this->lang = $lang;
+					Cookie::set('kohanaphp-lang',$this->lang);
+					break;
+				}
+			}
+		}
+		
+		// If $this->lang differs from the lang param, it means no lang was given, but they either have a cookie or they want a certain language, so make sure the cookie is set and redirect
+		if ($this->lang != $this->request->param('lang'))
+		{
+			
+			$this->request->redirect(Route::get('page')->uri(array('lang'=>$this->lang,'action'=>$this->request->action)));
+		}
+		
+		// Check if the language we have is a valid one
+		if (Arr::get($languages,$this->lang,false))
+		{
+			Cookie::set('kohanaphp-lang',$this->lang);
+		}
+		else
+		{
+			$this->request->action = 'error';
+		}
+
 		if (isset($this->page_titles[$this->request->action]))
 		{
 			// Use the defined page title
@@ -21,13 +62,30 @@ class Controller_Page extends Controller_Website {
 			$title = ucwords(str_replace('_', ' ', $this->request->action));
 		}
 
+		if ($this->auto_render)
+		{
+			$this->template->meta_tags = array();
+
+			$this->template->styles = array(
+				'media/css/print.css'  => 'print',
+				'media/css/screen.css' => 'screen',
+				'media/css/website.css' => 'screen',
+			);
+
+			$this->template->scripts = array(
+				'media/js/jquery-1.3.2.min.js',
+				'media/js/website.js',
+				'media/js/jquery.cycle.min.js',
+			);
+		}
+
 		$this->template->title   = $title;
 		$this->template->content = View::factory('pages/'.$this->request->action);
 	}
 
 	public function action_home()
 	{
-		$kohana = Kohana_Config::instance()->load('kohana');
+		$kohana = Kohana::config('kohana');
 		$versions['ko2'] = current($kohana['ko2']['release']);
 		$versions['ko3'] = current($kohana['ko3']['release']);
 
@@ -83,11 +141,6 @@ class Controller_Page extends Controller_Website {
 		
 	}
 	
-	public function action_error()
-	{
-		$this->request->status = 404;
-	}
-
 	protected function multi_array_key_exists($needle, $haystack)
 	{
 		foreach ($haystack as $key => $value)

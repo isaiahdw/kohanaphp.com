@@ -66,7 +66,7 @@
 		<div class="container">
 			<div class="copyright span-6 prefix-1">
 				<p class="caps top"><?php echo HTML::anchor('', 'Kohana', array('class' => 'logo')) ?>
-					Copyright &copy;2007-2009<br/>
+					Copyright &copy;2007-<?php echo date('Y') ?><br/>
 					All rights reserved<br/>
 					The awesome <?php echo HTML::anchor('team', 'Kohana Team') ?>
 				</p>

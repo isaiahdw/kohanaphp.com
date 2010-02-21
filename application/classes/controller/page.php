@@ -10,6 +10,17 @@ class Controller_Page extends Controller_Website {
 	{
 		parent::before();
 
+		$lang = Request::instance()->param('lang');
+		$valid_langs = Kohana::config('kohana')->languages;
+
+		// Make sure we have a valid language
+		if (Request::instance()->action !== 'lang_redirect' AND ! in_array($lang, array_keys($valid_langs)))
+		{
+			die('testing');
+		}
+
+		I18n::$lang = $lang;
+
 		if (isset($this->page_titles[$this->request->action]))
 		{
 			// Use the defined page title

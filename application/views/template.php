@@ -22,10 +22,10 @@
 <body>
 	<div id="topline">
 		<ul id="quicklinks">
-			<li><a class="active" href="http://kohanaphp.com">Kohana</a></li>
-			<li><a href="http://forum.kohanaphp.com/">Community</a></li>
-			<li><a href="#">Development</a></li>
-			<li><a href="#">Documentation</a></li>
+			<li><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'))), 'Kohanaphp.com') ?></li>
+			<li><?php echo HTML::anchor('userguide/2', 'Kohana 2 Docs') ?></li>
+			<li><?php echo HTML::anchor('userguide/3', 'Kohana 3 Docs') ?></li>
+			<li><?php echo HTML::anchor('http://www.kohanajobs.com', 'Kohana Jobs') ?></li>
 		</ul>
 		<ul id="languages">
 			<?php foreach (Kohana::config('kohana')->languages as $lang => $inf): ?>

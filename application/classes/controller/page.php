@@ -16,7 +16,8 @@ class Controller_Page extends Controller_Website {
 		// Make sure we have a valid language
 		if (Request::instance()->action !== 'lang_redirect' AND ! in_array($lang, array_keys($valid_langs)))
 		{
-			die('testing');
+			throw new Kohana_Request_Exception('Unable to find a route to match the URI: :uri',
+			array(':uri' => $this->request->uri));
 		}
 
 		I18n::$lang = $lang;

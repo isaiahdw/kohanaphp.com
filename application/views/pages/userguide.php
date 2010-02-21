@@ -5,22 +5,26 @@
 	<p class="intro">Documentation is provided for both v2.x and v3.x, in separate places.</p>
 
 	<div class="version first">
-		<div class="tan-box">
-			<h2>Kohana 2.x</h2>
-			<p>For documenation of v2.x, please use the <?php echo HTML::anchor('http://docs.kohanaphp.com/', 'Kohana Documentation Wiki') ?>.</p>
+		<div class="green-box">
+			<h2>Latest Kohana 2.x User Guide:</h2>
+			<?php echo html::anchor('userguide/2.4','Kohana 2.4 User Guide',array('class'=>'button')) ?>
 		</div>
 	</div>
 	
 	<div class="version">
-		<div class="tan-box">
-			<h2>Kohana 3.x</h2>
-			<p>Documentation for v3.x can be found <?php echo HTML::anchor('', 'online') ?> and is also included in the <code>userguide</code> module in all releases.</p>
+		<div class="green-box">
+			<h2>Latest Kohana 3.x User Guide:</h2>
+			<?php echo html::anchor('userguide/3.0','Kohana 3.0 User Guide',array('class'=>'button')) ?>
 		</div>
 	</div>
 	<div class="clear"></div>
 
-	<h2>I still need help!</h2>
+	<h2>Still need help?</h2>
 
-	<p>The Kohana <?php echo HTML::anchor('community', 'user community') ?> may be able to help you find the answer you are looking for.</p>
+	<p>The Kohana <?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'community')), 'user community') ?> may be able to help you find the answer you are looking for.</p>
+	
+	<h3>Userguide Archives:</h3>
+	
+	<p><?php echo html::anchor('userguide/2.3','Kohana 2.3 User Guide') ?></p>
 
 </div>

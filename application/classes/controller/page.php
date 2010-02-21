@@ -27,7 +27,7 @@ class Controller_Page extends Controller_Website {
 
 	public function action_home()
 	{
-		$kohana = Kohana_Config::instance()->load('kohana');
+		$kohana = Kohana::config('kohana');
 		$versions['ko2'] = current($kohana['ko2']['release']);
 		$versions['ko3'] = current($kohana['ko3']['release']);
 
@@ -76,6 +76,20 @@ class Controller_Page extends Controller_Website {
 	public function action_help()
 	{
 
+	}
+
+	public function action_versions()
+	{
+
+	}
+
+	public function action_lang_redirect()
+	{
+		$preferred_lang = key(array_intersect_key(Request::accept_lang(), Kohana::config('kohana')->languages));
+
+		$preferred_lang = $preferred_lang === NULL ? 'en' : $preferred_lang;
+
+		$this->request->redirect(Route::get('page')->uri(array('lang' => $preferred_lang)));
 	}
 
 	protected function multi_array_key_exists($needle, $haystack)

@@ -4,9 +4,20 @@
 
 	<p class="intro">Documentation is provided for both v2.x and v3.x, in separate places.</p>
 
-	<p>For documenation of v2.x, please use the <?php echo HTML::anchor('http://docs.kohanaphp.com/', 'Kohana Documentation Wiki') ?>.</p>
-
-	<p>Documentation for v3.x can be found <?php echo HTML::anchor(Route::get('docs/guide')->uri(), 'online') ?> and is also included in the <code>userguide</code> module in all releases.</p>
+	<div class="version first">
+		<div class="tan-box">
+			<h2>Kohana 2.x</h2>
+			<p>For documenation of v2.x, please use the <?php echo HTML::anchor('http://docs.kohanaphp.com/', 'Kohana Documentation Wiki') ?>.</p>
+		</div>
+	</div>
+	
+	<div class="version">
+		<div class="tan-box">
+			<h2>Kohana 3.x</h2>
+			<p>Documentation for v3.x can be found <?php echo HTML::anchor(Route::get('docs/guide')->uri(), 'online') ?> and is also included in the <code>userguide</code> module in all releases.</p>
+		</div>
+	</div>
+	<div class="clear"></div>
 
 	<h2>I still need help!</h2>
 

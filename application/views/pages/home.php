@@ -1,91 +1,108 @@
 <div class="span-22 prefix-1 last">
-	<h1>How is Kohana Different?</h1>
-	<p>Kohana is a <strong>PHP 5 framework</strong> that uses the <strong>Model View Controller</strong> architectural pattern. It aims to be <strong>secure</strong>, <strong>lightweight</strong>, and <strong>easy</strong> to use.
-	Although Kohana uses many common design patterns and concepts found in other frameworks, there are some things that make Kohana stand out:</p>
-	
-	<div id="rotator_div">
-		<ul id="pager">
-			<li>
-				<h3><a href="#">Community Driven</a></h3>
+	<h1><?php echo __('How is Kohana Different?') ?></h1>
+	<p><?php echo __('Kohana is a <strong>PHP 5 framework</strong> that uses the <strong>Model View Controller</strong> architectural pattern. It aims to be <strong>secure</strong>, <strong>lightweight</strong>, and <strong>easy</strong> to use.
+	Although Kohana uses many common design patterns and concepts found in other frameworks, there are some things that make Kohana stand out:') ?></p>
+</div>
+<div class="span-22 prefix-1 last">
+	<div class="rotator">
+		<ul id="pages">
+			<li class="first">
+				<h3><a href="#"><?php echo __('Community Driven') ?></a></h3>
 			</li>
 			<li>
-				<h3><a href="#">Strict PHP 5 OOP</a></h3>
+				<h3><a href="#"><?php echo __('Strict PHP 5 OOP') ?></a></h3>
 			</li>
 			<li>
-				<h3><a href="#">Extremely Lightweight</a></h3>
+				<h3><a href="#"><?php echo __('Lightweight') ?></a></h3>
 			</li>
 			<li>
-				<h3><a href="#">Cascading Resources</a></h3>
+				<h3><a href="#"><?php echo __('Flexible') ?></a></h3>
 			</li>
 			<li>
-				<h3><a href="#">Modules</a></h3>
+				<h3><a href="#"><?php echo __('Easy to Learn') ?></a></h3>
 			</li>
-			<li>
-				<h3><a href="#">Transparent Extensions</a></h3>
+			<li class="last">
+				<h3><a href="#"><?php echo __('100% UTF-8 Compatible') ?></a></h3>
 			</li>
 		</ul>
-		<ul id="rotator">
+		<ul id="slides">
 			<li class="active">
 				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
-				<h4>Community Driven</h4>
+				<h4><?php echo __('Community Driven') ?></h4>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions. Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 			</li>
 			<li>
 				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
-				<h4>Strict PHP 5 <abbr title="Object Oriented Programming">OOP</abbr></h4>
+				<h4><?php echo __('Strict PHP 5 OOP') ?></h4>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 			</li>
 			<li>
-				<h4>Extremely lightweight</h4>
-				<p>Kohana has no dependencies on PECL extensions or PEAR libraries. </p>
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Lightweight" />
+				<h4><?php echo __('Lightweight') ?></h4>
+				<p>Kohana has no dependencies on PECL extensions or PEAR libraries.</p>
+				<p>The code base is lean and mean, so it's easy to find your way around.</p>
 			</li>
 			<li>
-				<h4>Cascading Resources</h4>
-				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Flexible" />
+				<h4><?php echo __('Flexible') ?></h4>
+				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.  Modules can be added or created, which add functionility.  You can also transparently extend any class if you need something different.</p>
 			</li>
 			<li>
-				<h4>Modules</h4>
-				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_learn.png" alt="Easy to Learn" />
+				<h4><?php echo __('Easy to Learn') ?></h4>
+				<p>Kohana was well thought out, and is very easy to learn.  There is great documentation, and if you get stuck, you can ask for help on the forums or in IRC.</p>
 			</li>
 			<li>
-				<h4>Transparent Extensions</h4>
-				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.</p>
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_utf8.png" alt="UTF-8 Compatible" />
+				<h4><?php echo __('100% UTF-8 Compatible') ?></h4>
+				<p>All Kohana functions are UTF-8 aware, so Kohana will work anywhere in the world!</p>
 			</li>
 		</ul>
+		<div class="clear"></div>
 	</div>
 </div>
 <div class="span-22 prefix-1">
 	<hr />
 </div>
-<div class="span-23 prefix-1">
-	<div class="downloads span-14">
-		<h2>Getting Started</h2>
-		<p>Kohana has a couple different versions to choose from. <a href="">Which versions should I use?</a></p>
-		<div class="span-6 suffix-1 border-right">
-			<h4>Kohana 3.x</h4>
-			<ul>
-				<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
-				<li>Flexible file system structure</li>
-				<li>Advanced Routing</li>
-				<li>Rapid development cycle.</li>
-			</ul>
-			<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="button">Version <?php echo $versions['ko3']['version'] ?></a>
+<div class="span-22 prefix-1">
+	<div class="span-14">
+		<div class="tan-box downloads">
+			<h2>Getting Started</h2>
+			<p>Kohana has a couple different versions to choose from. <?php echo html::anchor('versions','Which versions should I use?')?></p>
+			<div class="download-2x">
+				<h4>Kohana 2.x</h4>
+				<ul>
+					<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
+					<li>Powerful event handler</li>
+					<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
+					<li>Long Term Support</li>
+				</ul>
+				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="download-button">Version <?php echo $versions['ko2']['version'] ?></a>
+			</div>
+			<div class="download-3x">
+				<h4>Kohana 3.x</h4>
+				<ul>
+					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
+					<li>Flexible file system structure</li>
+					<li>Advanced Routing</li>
+					<li>Rapid development cycle.</li>
+				</ul>
+				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="download-button">Version <?php echo $versions['ko3']['version'] ?></a>
+			</div>
+			<div class="clear"></div>
 		</div>
-		<div class="span-6 last">
-			<h4>Kohana 2.x</h4>
-			<ul>
-				<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
-				<li>Powerful event handler</li>
-				<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
-				<li>Long Term Support</li>
-			</ul>
-			<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="button">Version <?php echo $versions['ko2']['version'] ?></a>
+		<div id="testimonials">
+			<h3>What Developers are Saying</h3>
+			<div id="testimonial">
+				Kohana is fantastic. I'm in love with PHP again!
+			<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
 		</div>
 	</div>
-	<div id="sidebar" class="span-7 last">
-		<div class="news">
+	</div>
+	<div class="span-7 prefix-1 last">
+		<div class="news green-box">
 			<h3>News From Kohana</h3>
 			<ul>
 				<li><a href="#">Kohana Joins the Software Freedom...</a></li>
@@ -94,29 +111,19 @@
 				<li><a href="#">New Kohana Website</a></li>
 				<li><a href="#">New Kohana Website</a></li>
 			</ul>
-			<h4>Stay Informed</h4>
+			<h3>Stay Informed</h3>
 			<ul>
 				<li><a id="rss_feed" href="#">RSS News Feed</a></li>
 				<li id="email_sub">Updates by Email</li>
 				<li id="follow_twitter">Follow Us on Twitter</li>
 			</ul>
+			<h3>You Can Help</h3>
+			<p>If you use Kohana and find it worth something, please consider donating. Your donations will be directly used to cover the costs of maintaining Kohana.</p>
+			<a href="">Donate button goes here</a>
 		</div>
 	</div>
 </div>
+
 <div class="span-22 prefix-1">
 	<hr />
-</div>
-<div class="span-22 prefix-1">
-	<div id="testimonials" class="span-16 first">
-		<h3>What Developers are Saying</h3>
-		<div id="testimonial">
-			Kohana is fantastic. I'm in love with PHP again!
-			<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
-		</div>
-		<strong>“</strong>
-	</div>
-	<div id="help" class="span-6 prefix-2 last">
-		<h3>You Can Help</h3>
-		<p>If you use Kohana and find it worth something, please consider donating. Your donations will be directly used to cover the costs of maintaining Kohana.</p>
-	</div>
 </div>

@@ -35,7 +35,7 @@
 	</div>
 	<div id="header">
 		<div class="container">
-			<?php echo HTML::anchor('', HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>
+			<?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'))), HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>
 			<div id="menu">
 				<ul>
 					<?php

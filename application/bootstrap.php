@@ -105,5 +105,5 @@ catch (Exception $e)
 /**
  * Display the request response.
  */
-$request->headers['Content-Length'] = mb_strlen( (string) $request->response);
+$request->headers['Content-Length'] = strlen( (string) $request->response);
 echo $request->send_headers()->response;

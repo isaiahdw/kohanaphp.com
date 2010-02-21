@@ -29,7 +29,7 @@
 		</ul>
 		<ul id="languages">
 			<?php foreach (Kohana::config('kohana')->languages as $lang => $inf): ?>
-				<li><?php echo html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))) ?><li>
+				<li><?php echo html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))) ?></li>
 			<?php endforeach; ?>
 		</ul>
 	</div>

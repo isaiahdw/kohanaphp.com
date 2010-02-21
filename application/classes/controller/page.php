@@ -14,10 +14,9 @@ class Controller_Page extends Controller_Website {
 		$valid_langs = Kohana::config('kohana')->languages;
 
 		// Make sure we have a valid language
-		if (Request::instance()->action !== 'lang_redirect' AND ! in_array($lang, array_keys($valid_langs)))
+		if (! in_array($lang, array_keys($valid_langs)) AND Request::instance()->action !== 'lang_redirect' AND Request::instance()->action !== 'error')
 		{
-			throw new Kohana_Request_Exception('Unable to find a route to match the URI: :uri',
-			array(':uri' => $this->request->uri));
+			throw new Kohana_Exception('Unable to find a route to match the URI: :uri (specified language was not found in config)', array(':uri' => $this->request->uri),404);
 		}
 
 		I18n::$lang = $lang;
@@ -34,6 +33,10 @@ class Controller_Page extends Controller_Website {
 		}
 
 		$this->template->title   = $title;
+		if ( ! kohana::find_file('views','pages/'.$this->request->action))
+		{
+			throw new Kohana_Exception('Could not find the view for the page you requested: :uri',array(':uri' => $this->request->uri),404);
+		}
 		$this->template->content = View::factory('pages/'.$this->request->action);
 	}
 
@@ -75,7 +78,7 @@ class Controller_Page extends Controller_Website {
 
 	}
 
-	public function action_development()
+	public function action_userguide()
 	{
 
 	}
@@ -83,6 +86,11 @@ class Controller_Page extends Controller_Website {
 	public function action_team()
 	{
 
+	}
+	
+	public function action_development()
+	{
+		
 	}
 
 	public function action_help()
@@ -102,6 +110,11 @@ class Controller_Page extends Controller_Website {
 		$preferred_lang = $preferred_lang === NULL ? 'en' : $preferred_lang;
 
 		$this->request->redirect(Route::get('page')->uri(array('lang' => $preferred_lang)));
+	}
+	
+	public function action_error()
+	{
+		throw new Kohana_Exception('Could not find the page you requested: :uri',array(':uri'=>$this->request->uri),404);
 	}
 
 	protected function multi_array_key_exists($needle, $haystack)

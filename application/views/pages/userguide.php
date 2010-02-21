@@ -14,7 +14,7 @@
 	<div class="version">
 		<div class="tan-box">
 			<h2>Kohana 3.x</h2>
-			<p>Documentation for v3.x can be found <?php echo HTML::anchor(Route::get('docs/guide')->uri(), 'online') ?> and is also included in the <code>userguide</code> module in all releases.</p>
+			<p>Documentation for v3.x can be found <?php echo HTML::anchor('', 'online') ?> and is also included in the <code>userguide</code> module in all releases.</p>
 		</div>
 	</div>
 	<div class="clear"></div>

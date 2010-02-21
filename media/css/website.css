@@ -29,15 +29,14 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 #content,
 #footer { float: left; clear: both; width: 100%; }
 
-#topline { background-color: #00262f; color: #F1F8DB; width: 950px; margin: 0px auto; padding: 8px 0; overflow: hidden; }
-	#topline ul li { padding: 8px 0px; display: inline; }
-		#topline ul li a { color: #F1F8DB; text-decoration: none; }
-		#topline ul li a:hover { color: #EE9323; }
-	#topline ul#quicklinks { display: inline; float: left; margin:0; padding:0;}
-		#topline ul#quicklinks li { margin:0 3px; padding:0; font-size:1.2em;}
-			#topline ul#quicklinks li a.active { color:#EE9323; }
-	#topline ul#languages { display: inline; float: right; margin:0; padding:0;}
-		#topline ul#languages li { margin:0 1px; padding:0; }
+#topline { background-color: #00262f; color: #F1F8DB; width: 950px; margin: 0px auto; padding:1px 0; overflow: hidden;}
+	#topline ul, #topline li, #topline a { margin:0; padding:0;	}
+	#topline ul#quicklinks { float: left; margin:0; padding:0; list-style-type:none; }
+		#topline ul#quicklinks li { float:left; margin:0; padding:6px 10px; font-size:1.2em; border-left:1px solid #004F60;}
+		#topline ul#quicklinks li.first { border-left:none; padding-top:7px; padding-bottom:5px; }
+		#topline ul#quicklinks li.active { color:#EE9323; }
+			#topline ul#quicklinks li a { float:left; color: #F1F8DB; text-decoration: none;  }
+			#topline ul#quicklinks li a:hover { color:#EE9323; }
 		
 .container { width:950px; margin:0px auto; position:relative; }
 .cleaner { clear:both; visibility:hidden; margin:0; padding:0; border:0; height:0; }
@@ -84,6 +83,10 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 			-moz-border-radius:0px 6px 0px 0px;
 			border-radius: 0px 6px 0px 0px;
 		}
+		
+	#languages { position:absolute; top:0px; right:30px; background:#65A826 url(../img/overlay2.png) repeat-x; border:1px solid #76B714; border-top:none; border-radius: 0 0 8px 8px; -moz-border-radius: 0 0 8px 8px; -webkit-border-radius: 0 0 8px 8px; -opera-border-radius: 0 0 8px 8px; -khtml-border-radius: 0 0 8px 8px;}
+		#languages ul { list-style-type:none; margin:0; padding:3px 5px 8px; }
+			#languages ul li { float:left; margin:0 3px ; padding: 0; }
 		
 #content { background: #f1f8db url(../img/content.png) center top repeat-x; }
 	#content .wrapper { padding-top: 1em; background: transparent url(../img/wrapper.png) center top no-repeat; }

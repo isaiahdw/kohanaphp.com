@@ -79,6 +79,14 @@ Route::set('page', '<lang>(/<action>)', array('lang' => '[a-z]{2}', 'action' => 
 		'lang'       => 'en',
 	));
 
+// This 404 route will be hit if a url without a language is supplied, like "kohanaphp.com/download" or "kohanaphp.com/i_dont_exists"
+Route::set('404', '<page>',array('page'=>'.+'))
+	->defaults(array(
+		'controller' => 'page',
+		'action'	 => 'error',
+		'lang'       => 'en',
+	));
+
 /**
  * Execute the main request using PATH_INFO. If no URI source is specified,
  * the URI will be automatically detected.
@@ -91,13 +99,19 @@ try
 }
 catch (Exception $e)
 {
-	if ( Kohana::$environment == "development")
+	// If we are in development and the error wasn't a 404, show the stack trace.
+	if ( Kohana::$environment == "development" AND $e->getCode() != 404 )
 	{
 		throw $e;
 	}
+	
+	// Log the error
+	Kohana::$log->add(Kohana::ERROR, Kohana::exception_text($e));
+	
+	// Set the response to the 404 page
 	$request->status = 404;
 	$request->response = View::factory('template',array(
-		'title' => 'Error',
+		'title' => 'Oops',
 		'content' => View::factory('pages/error'),
 	));
 }

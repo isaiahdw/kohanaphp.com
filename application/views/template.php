@@ -22,15 +22,11 @@
 <body>
 	<div id="topline">
 		<ul id="quicklinks">
-			<li><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'))), 'Kohanaphp.com') ?></li>
-			<li><?php echo HTML::anchor('userguide/2', 'Kohana 2 Docs') ?></li>
-			<li><?php echo HTML::anchor('userguide/3', 'Kohana 3 Docs') ?></li>
+			<li class="first active"><?php echo HTML::anchor('http://kohanaphp.com', html::image('media/img/kohana-small.png')) ?></li>
+			<li><?php echo HTML::anchor('http://kohanaphp.com/userguide', 'User Guide') ?></li>
+			<li><?php echo HTML::anchor('http://forum.kohanaphp.com/', 'Community') ?></li>
+			<li><?php echo HTML::anchor('http://dev.kohanaphp.com/', 'Development') ?></li>
 			<li><?php echo HTML::anchor('http://www.kohanajobs.com', 'Kohana Jobs') ?></li>
-		</ul>
-		<ul id="languages">
-			<?php foreach (Kohana::config('kohana')->languages as $lang => $inf): ?>
-				<li><?php echo html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))) ?></li>
-			<?php endforeach; ?>
 		</ul>
 	</div>
 	<div id="header">
@@ -43,9 +39,16 @@
 					?>
 					<li class="home first<?php echo $select == 'home'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'))), __('Home')) ?></li>
 					<li class="download<?php echo $select == 'download'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'download')), __('Download')) ?></li>
-					<li class="documentation<?php echo $select == 'documentation'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'documentation')), __('Documentation')) ?></li>
+					<li class="userguide<?php echo $select == 'userguide'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'userguide')), __('User Guide')) ?></li>
 					<li class="community<?php echo $select == 'community'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'community')), __('Community')) ?></li>
 					<li class="development last<?php echo $select == 'development'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'development')), __('Development')) ?></li>
+				</ul>
+			</div>
+			<div id="languages">
+				<ul>
+					<?php foreach (Kohana::config('kohana')->languages as $lang => $inf): ?>
+						<li><?php echo html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))) ?></li>
+					<?php endforeach; ?>
 				</ul>
 			</div>
 		</div>

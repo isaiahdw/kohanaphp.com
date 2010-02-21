@@ -10,48 +10,6 @@ class Controller_Page extends Controller_Website {
 	{
 		parent::before();
 
-		// Check for lang param
-		$this->lang = $this->request->param('lang');
-		$languages = Kohana::config('kohana')->languages;
-		
-		// If no lang param, check for lang cookie
-		if ($this->lang == null)
-		{
-			$this->lang = Cookie::get('kohanaphp-lang','');
-		}
-		
-		// If Lang is still null, try the ACCEPT_LANGUAGE http header:
-		if ($this->lang == null)
-		{
-			foreach ($this->request->accept_lang() as $lang => $priority )
-			{
-				if (Arr::get($languages,$lang,null))
-				{
-					$this->lang = $lang;
-					Cookie::set('kohanaphp-lang',$this->lang);
-					break;
-				}
-			}
-		}
-		
-		// If $this->lang differs from the lang param, it means no lang was given, but they either have a cookie or they want a certain language, so make sure the cookie is set and redirect
-		if ($this->lang != $this->request->param('lang'))
-		{
-			
-			$this->request->redirect(Route::get('page')->uri(array('lang'=>$this->lang,'action'=>$this->request->action)));
-		}
-		
-		// Check if the language we have is a valid one
-		if (Arr::get($languages,$this->lang,false))
-		{
-			Cookie::set('kohanaphp-lang',$this->lang);
-			I18n::$lang = $this->lang;
-		}
-		else
-		{
-			$this->request->action = 'error';
-		}
-
 		if (isset($this->page_titles[$this->request->action]))
 		{
 			// Use the defined page title
@@ -119,12 +77,21 @@ class Controller_Page extends Controller_Website {
 	{
 
 	}
-	
+
 	public function action_versions()
 	{
-		
+
 	}
-	
+
+	public function action_lang_redirect()
+	{
+		$preferred_lang = key(array_intersect_key(Request::accept_lang(), Kohana::config('kohana')->languages));
+
+		$preferred_lang = $preferred_lang === NULL ? 'en' : $preferred_lang;
+
+		$this->request->redirect(Route::get('page')->uri(array('lang' => $preferred_lang)));
+	}
+
 	protected function multi_array_key_exists($needle, $haystack)
 	{
 		foreach ($haystack as $key => $value)

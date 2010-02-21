@@ -13,10 +13,10 @@
 				<h3><a href="#"><?php echo __('Strict PHP 5 OOP') ?></a></h3>
 			</li>
 			<li>
-				<h3><a href="#"><?php echo __('Extremely Lightweight') ?></a></h3>
+				<h3><a href="#"><?php echo __('Lightweight') ?></a></h3>
 			</li>
 			<li>
-				<h3><a href="#"><?php echo __('Very Flexible') ?></a></h3>
+				<h3><a href="#"><?php echo __('Flexible') ?></a></h3>
 			</li>
 			<li>
 				<h3><a href="#"><?php echo __('Easy to Learn') ?></a></h3>
@@ -39,14 +39,14 @@
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 			</li>
 			<li>
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Extremely Lightweight" />
-				<h4><?php echo __('Extremely Lightweight') ?></h4>
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Lightweight" />
+				<h4><?php echo __('Lightweight') ?></h4>
 				<p>Kohana has no dependencies on PECL extensions or PEAR libraries.</p>
 				<p>The code base is lean and mean, so it's easy to find your way around.</p>
 			</li>
 			<li>
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Very Flexible" />
-				<h4><?php echo __('Very Flexible') ?></h4>
+				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Flexible" />
+				<h4><?php echo __('Flexible') ?></h4>
 				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.  Modules can be added or created, which add functionility.  You can also transparently extend any class if you need something different.</p>
 			</li>
 			<li>

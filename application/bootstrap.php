@@ -61,32 +61,22 @@ Kohana::$log->attach(new Kohana_Log_File(APPPATH.'logs'));
 Kohana::$config->attach(new Kohana_Config_File);
 
 /**
- * Enable the document comments. This _must_ be set before the userguide module is enabled.
+ * No language
  */
-Route::set('docs/comments', 'guide/comments/<page>(/<action>(/<id>))', array('page' => '[^/]+', 'id' => '\d+'))
-	->defaults(array(
-		'controller' => 'guide_comment',
-		'action'     => 'list',
-	));
-
-/**
- * Enable modules. Modules are referenced by a relative or absolute path.
- */
-Kohana::modules(array(
-	'database'   => MODPATH.'database',   // Database access
-	'sprig'      => MODPATH.'sprig',      // Sprig modeling
-	'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	));
+Route::set('lang_check', '')
+		->defaults(array(
+			'controller' => 'page',
+			'action'     => 'lang_redirect'));
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('page', '((<lang>/)<action>)', array('lang' => '[a-z]{2}', 'action' => '.+'))
+Route::set('page', '<lang>(/<action>)', array('lang' => '[a-z]{2}', 'action' => '.+'))
 	->defaults(array(
 		'controller' => 'page',
 		'action'     => 'home',
-		'lang'       => null,
+		'lang'       => 'en',
 	));
 
 /**
@@ -115,5 +105,5 @@ catch (Exception $e)
 /**
  * Display the request response.
  */
-$request->headers['Content-Length'] = strlen((string)$request->response);
+$request->headers['Content-Length'] = mb_strlen( (string) $request->response);
 echo $request->send_headers()->response;

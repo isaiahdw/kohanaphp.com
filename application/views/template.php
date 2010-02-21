@@ -22,10 +22,10 @@
 <body>
 	<div id="topline">
 		<ul id="quicklinks">
-			<li class="first active"><?php echo HTML::anchor('http://kohanaphp.com', '&nbsp;') ?></li>
-			<li><?php echo HTML::anchor('http://kohanaphp.com/userguide', 'User Guide') ?></li>
-			<li><?php echo HTML::anchor('http://forum.kohanaphp.com/', 'Forums') ?></li>
-			<li><?php echo HTML::anchor('http://dev.kohanaphp.com/', 'Development') ?></li>
+			<li class="first active"><?php echo HTML::anchor('http://kohanaframework.org', '&nbsp;') ?></li>
+			<li><?php echo HTML::anchor('/en/userguide', 'User Guide') ?></li>
+			<li><?php echo HTML::anchor('http://forums.kohanaframework.org', 'Forums') ?></li>
+			<li><?php echo HTML::anchor('http://dev.kohanaframework.org', 'Development') ?></li>
 			<li><?php echo HTML::anchor('http://www.kohanajobs.com', 'Kohana Jobs') ?></li>
 		</ul>
 	</div>

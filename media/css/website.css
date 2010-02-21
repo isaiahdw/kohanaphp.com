@@ -33,17 +33,19 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 #topline {
 	background-color: #00262f;
 	color: #F1F8DB;
-	width: 950px;
+	width: 100%;
 	margin: 0px auto;
 	padding:1px 0;
 	overflow: hidden;
 	height:25px;
+	text-align:center;
 }
 	#topline ul#quicklinks {
-		float: left;
 		margin:0;
 		padding:0;
 		list-style-type:none;
+		width:500px;
+		margin:0 auto;
 	}
 		#topline ul#quicklinks li {
 			float:left;

@@ -37,6 +37,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	margin: 0px auto;
 	padding:1px 0;
 	overflow: hidden;
+	height:25px;
 }
 	#topline ul#quicklinks {
 		float: left;
@@ -47,27 +48,35 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		#topline ul#quicklinks li {
 			float:left;
 			margin:0;
-			padding:6px 10px;
-			font-size:1.2em;
-			border-left:1px solid #004F60;
-		}
-		#topline ul#quicklinks li.first {
-			border-left:none;
-			padding-top:7px;
-			padding-bottom:5px;
-		}
-		#topline ul#quicklinks li.active {
-			color:#EE9323;
+			padding:6px 10px 6px 11px;
+			background:transparent url('../img/topline-divider.png') center left no-repeat scroll;
 		}
 			#topline ul#quicklinks li a {
 				padding:0;
 				margin:0;
 				float:left;
-				color: #F1F8DB;
+				color:#FFF;
+				font-weight:bold;
 				text-decoration: none;
+				height:13px;
+				font-size:13px; /* I know using px is bad form, but this is just so its consistent wherever its used, it also means this bar won't resize in old browsers, which is actually kinda nice */
 			}
+		/* Kohana logo in the top bar */
+		#topline ul#quicklinks li.first {
+			border-left:none;
+			padding-top:7px;
+			padding-bottom:5px;
+			background:none;
+		}
+			#topline ul#quicklinks li.first a { width:59px; height:13px; background: transparent url('../img/kohana-small.png') top left no-repeat scroll; }
+			#topline ul#quicklinks li.first.active a { background: transparent url('../img/kohana-small-active.png') top left no-repeat scroll; }
+		
+		#topline ul#quicklinks li.active a {
+			color:#ED900E;
+		}
+			
 			#topline ul#quicklinks li a:hover {
-				color:#EE9323;
+				color:#ED900E;
 			}
 		
 .container {
@@ -160,6 +169,8 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		right:30px;
 		background:#65A826 url(../img/overlay2.png) repeat-x;
 		border:1px solid #76B714;
+		padding:2px 6px 4px;
+		margin:0;
 		border-top:none;
 		border-radius: 0 0 8px 8px;
 		-moz-border-radius: 0 0 8px 8px;
@@ -170,14 +181,19 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		#languages ul {
 			list-style-type:none;
 			margin:0;
-			padding:3px 5px 8px;
+			padding:0;
 		}
 			#languages ul li {
 				float:left;
-				margin:0 3px ;
-				padding: 0;
+				margin:0;
+				padding:0;
 			}
-		
+				#languages ul li a {
+					padding:1px 4px;
+				}
+				#languages ul li.active a {
+					background:#A3F224;
+				}
 #content { background: #f1f8db url(../img/content.png) center top repeat-x; }
 	#content .wrapper { padding-top: 1em; background: transparent url(../img/wrapper.png) center top no-repeat; }
 	#content .container { background-color: #FCFDF7; min-height: 350px; }

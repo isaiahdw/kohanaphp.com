@@ -22,9 +22,9 @@
 <body>
 	<div id="topline">
 		<ul id="quicklinks">
-			<li class="first active"><?php echo HTML::anchor('http://kohanaphp.com', html::image('media/img/kohana-small.png')) ?></li>
+			<li class="first active"><?php echo HTML::anchor('http://kohanaphp.com', '&nbsp;') ?></li>
 			<li><?php echo HTML::anchor('http://kohanaphp.com/userguide', 'User Guide') ?></li>
-			<li><?php echo HTML::anchor('http://forum.kohanaphp.com/', 'Community') ?></li>
+			<li><?php echo HTML::anchor('http://forum.kohanaphp.com/', 'Forums') ?></li>
 			<li><?php echo HTML::anchor('http://dev.kohanaphp.com/', 'Development') ?></li>
 			<li><?php echo HTML::anchor('http://www.kohanajobs.com', 'Kohana Jobs') ?></li>
 		</ul>
@@ -46,9 +46,13 @@
 			</div>
 			<div id="languages">
 				<ul>
-					<?php foreach (Kohana::config('kohana')->languages as $lang => $inf): ?>
-						<li><?php echo html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))) ?></li>
-					<?php endforeach; ?>
+					<?php
+					foreach (Kohana::config('kohana')->languages as $lang => $inf)
+					{
+						$active = ($lang == Request::instance()->param('lang'))?' class="active"':'';
+						echo '<li'.$active.'>'.html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))).'</li>';
+					}
+					?>
 				</ul>
 			</div>
 		</div>

@@ -25,6 +25,12 @@
 
 		<dt>Stack Overflow</dt>
 		<dd>Share your knowledge by answering <?php echo HTML::anchor('http://stackoverflow.com/questions/tagged/kohana', 'user questions') ?> about Kohana.</dd>
+
+		<dt>Kohana Jobs</dt>
+		<dd>Find a developer with Kohana experience, or find a job relating to Kohana at <?php echo HTML::anchor('http://kohanajobs.com','Kohana Jobs') ?>.</dd>
+
+		<dt>Unofficial Kohana 3 Wiki</dt>
+		<dd>A variety of useful articles relating to Kohana 3 can be found at the <?php echo HTML::anchor('http://kerkness.ca/wiki/doku.php','Unnofficial Wiki') ?> hosted by Kerkness.</dd>
 	</dl>
 
 </div>

@@ -119,7 +119,9 @@
 			</ul>
 			<h3>You Can Help</h3>
 			<p>If you use Kohana and find it worth something, please consider donating. Your donations will be directly used to cover the costs of maintaining Kohana.</p>
-			<a href="">Donate button goes here</a>
+			<div class="center">
+				<?php echo html::anchor('#','Donate to Kohana',array('class'=>'button')) ?>
+			</div>
 		</div>
 	</div>
 </div>

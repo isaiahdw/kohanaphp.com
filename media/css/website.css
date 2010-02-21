@@ -233,7 +233,10 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		}
 
 /* Various site wide styles */
-.tan-box {
+#content .center {
+	text-align:center;
+}
+#content .tan-box {
 	border:1px solid #DBE5BC;
 	background-color: #F1F8DB;
 	padding: 8px 16px 8px;
@@ -243,7 +246,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	-opera-border-radius: 8px;
 	-khtml-border-radius: 8px;
 }
-.green-box {
+#content .green-box {
 	background: #C1F788;
 	border:1px solid #B0DB7D;
 	padding: 8px 16px;
@@ -254,20 +257,25 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	-khtml-border-radius:8px;
 }
 
-a.button {
-	background:#83C018 url(../img/overlay2.png) repeat-x;
-	border:1px solid #76B714;
+#content a.button {
+	padding:.6em 1em;
+	margin:3em auto;
 	text-decoration:none;
 	color:#3F5C0B;
 	text-shadow:0.1em 0.1em 1px #76B714;
+	font-weight:bold;
+	background:#83C018 url(../img/overlay2.png) repeat-x;
+	border:1px solid #76B714;
 	border-radius: 8px;
+	line-height:2.4em;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-opera-border-radius: 8px;
 	-khtml-border-radius: 8px;
 }
-	a.button:hover {
+	#content a.button:hover {
 		background-color:#76B714;
+		color: #2C360B;
 	}
 
 #content a.download-button {

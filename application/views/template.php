@@ -4,18 +4,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php echo Kohana::$charset ?>" />
 	<title>Kohana: <?php echo $title ?></title>
 	
-	<?php foreach ($styles as $style => $media)
-		echo HTML::style($style, array('media' => $media)), "\n" ?>
+	<?php
+	echo HTML::style('media/css/screen.css',array('media'=>'screen')), "\n";
+	echo HTML::style('media/css/website.css',array('media'=>'screen')), "\n";
+	echo HTML::style('media/css/print.css',array('media'=>'print')), "\n";
 	
-	<?php foreach ($scripts as $script)
-		echo HTML::script($script), "\n" ?>
-		
+	echo HTML::script('media/js/jquery-1.3.2.min.js'), "\n";
+	echo HTML::script('media/js/website.js'), "\n";
+	echo HTML::script('media/js/jquery.cycle.min.js'), "\n";
+	?>
+
 	<!--[if lt IE 8]>
 	<?php echo HTML::script('media/js/IE8.min.js') ?>
 	<![endif]-->
-	
-	<?php foreach ($meta_tags as $meta)
-		echo '<meta'.HTML::attributes($meta).' />' ?>
 	
 </head>
 <body>

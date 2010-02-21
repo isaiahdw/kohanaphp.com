@@ -45,6 +45,7 @@ class Controller_Page extends Controller_Website {
 		if (Arr::get($languages,$this->lang,false))
 		{
 			Cookie::set('kohanaphp-lang',$this->lang);
+			I18n::$lang = $this->lang;
 		}
 		else
 		{
@@ -60,23 +61,6 @@ class Controller_Page extends Controller_Website {
 		{
 			// Use the page name as the title
 			$title = ucwords(str_replace('_', ' ', $this->request->action));
-		}
-
-		if ($this->auto_render)
-		{
-			$this->template->meta_tags = array();
-
-			$this->template->styles = array(
-				'media/css/print.css'  => 'print',
-				'media/css/screen.css' => 'screen',
-				'media/css/website.css' => 'screen',
-			);
-
-			$this->template->scripts = array(
-				'media/js/jquery-1.3.2.min.js',
-				'media/js/website.js',
-				'media/js/jquery.cycle.min.js',
-			);
 		}
 
 		$this->template->title   = $title;

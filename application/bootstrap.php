@@ -18,8 +18,9 @@ date_default_timezone_set('America/Chicago');
  */
 spl_autoload_register(array('Kohana', 'auto_load'));
 
-//-- Configuration and initialization -----------------------------------------
-
+/**
+ * Set the environment status by the domain.
+ */
 if (strpos($_SERVER['HTTP_HOST'], 'kohanaphp.com') !== FALSE)
 {
 	// We are live!
@@ -42,7 +43,6 @@ if (strpos($_SERVER['HTTP_HOST'], 'kohanaphp.com') !== FALSE)
  * - boolean  profile     enable or disable internal profiling               TRUE
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
-
 Kohana::init(array(
 	'base_url'   => Kohana::$environment === 'live' ? '/' : '/kohanaphp.com/',
 	'caching'    => Kohana::$environment === 'live',
@@ -90,34 +90,30 @@ Route::set('page', '((<lang>/)<action>)', array('lang' => '[a-z]{2}', 'action' =
 	));
 
 /**
- * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
- * If no source is specified, the URI will be automatically detected.
+ * Execute the main request using PATH_INFO. If no URI source is specified,
+ * the URI will be automatically detected.
  */
+$request = Request::instance();
+
 try
 {
-	$request = Request::instance()->execute();
-	$request->headers['Content-Length'] = strlen((string)$request->response);
-	$request->send_headers();
-	echo $request->response;
+	$request->execute();
 }
 catch (Exception $e)
 {
-	Request::instance()->status = 404;
-	Request::instance()->send_headers();
-	echo View::factory('template',array(
+	if ( Kohana::$environment == "development")
+	{
+		throw $e;
+	}
+	$request->status = 404;
+	$request->response = View::factory('template',array(
 		'title' => 'Error',
 		'content' => View::factory('pages/error'),
-		'meta_tags' => array(),
-		'styles' => array(
-			'media/css/print.css'  => 'print',
-			'media/css/screen.css' => 'screen',
-			'media/css/website.css' => 'screen',
-		),
-		'scripts' => array(
-			'media/js/jquery-1.3.2.min.js',
-			'media/js/website.js',
-			'media/js/jquery.cycle.min.js',
-		),
 	));
-	//throw $e;
 }
+
+/**
+ * Display the request response.
+ */
+$request->headers['Content-Length'] = strlen((string)$request->response);
+echo $request->send_headers()->response;

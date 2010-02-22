@@ -5,15 +5,15 @@
 	<p class="intro">Documentation is provided for both v2.x and v3.x, in separate places.</p>
 
 	<div class="version first">
-		<div class="green-box center">
-			<h2>Latest Kohana 2 User Guide:</h2>
+		<div class="tan-box center">
+			<h3>Kohana 2 User Guide:</h3>
 			<?php echo html::anchor('userguide/2.4','Kohana 2.4 User Guide',array('class'=>'button')) ?>
 		</div>
 	</div>
 	
 	<div class="version">
-		<div class="green-box center">
-			<h2>Latest Kohana 3 User Guide:</h2>
+		<div class="tan-box center">
+			<h3>Kohana 3 User Guide:</h3>
 			<?php echo html::anchor('userguide/3.0','Kohana 3.0 User Guide',array('class'=>'button')) ?>
 		</div>
 	</div>

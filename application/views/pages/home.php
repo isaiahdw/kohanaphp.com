@@ -92,13 +92,6 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div id="testimonials">
-			<h3>What Developers are Saying</h3>
-			<div id="testimonial">
-				Kohana is fantastic. I'm in love with PHP again!
-			<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
-		</div>
-	</div>
 	</div>
 	<div class="span-7 prefix-1 last">
 		<div class="news tan-box">
@@ -119,4 +112,13 @@
 		</div>
 	</div>
 	<div class="clear"></div>
+</div>
+
+<div class="span-22 prefix-1">
+	<div id="testimonials">
+		<h3>What Developers are Saying</h3>
+		<div id="testimonial">
+			Kohana is fantastic. I'm in love with PHP again!  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
+	</div>
 </div>

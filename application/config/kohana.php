@@ -3,6 +3,27 @@
 // 2.x branch
 $config['ko2'] = array(
 	'development' => array(
+		'2.4.1' => array(
+			'version'           => '2.4.1',
+			'codename'          => '',
+			'released'          => '',
+			'download'          => '',
+			'documentation'     => '',
+			'repository'        => '',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/164',
+		),
+		'2.5.0' => array(
+			'version'           => '2.5.0',
+			'codename'          => '',
+			'released'          => '',
+			'download'          => '',
+			'documentation'     => '',
+			'repository'        => '',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/163',
+		),
+		
+	),
+	'release' => array(
 		'2.4.0' => array(
 			'version'           => '2.4.0',
 			'codename'          => 'No Name',
@@ -10,19 +31,10 @@ $config['ko2'] = array(
 			'download'          => 'http://dev.kohanaphp.com/attachments/download/1355/kohana-v2.4.zip',
 			'documentation'     => 'http://kohanaphp.com/docs/24',
 			'repository'        => 'http://dev.kohanaphp.com/projects/kohana2/repository/show/tags/2.4.0',
-			'issues'            => 'http://dev.kohanaphp.com/projects/kohana2/issues',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/10',
 		),
-		/*'2.4.1' => array(
-			'version'           => '2.4.1',
-			'codename'          => '',
-			'released'          => '',
-			'download'          => 'http://dev.kohanaphp.com/attachments/download/1469/kohana-2.4.1.zip',
-			'documentation'     => '',
-			'repository'        => '',
-			'issue'             => '',
-		),*/
 	),
-	'release' => array(
+	'archive' => array(
 		'2.3.4' => array(
 			'version'           => '2.3.4',
 			'codename'          => 'buteo regalis',
@@ -30,10 +42,8 @@ $config['ko2'] = array(
 			'download'          => 'http://dev.kohanaphp.com/attachments/download/1355/kohana-v2.3.4.zip',
 			'documentation'     => 'http://docs.kohanaphp.com/',
 			'repository'        => 'http://dev.kohanaphp.com/projects/kohana2/repository/show/tags/2.3.4',
-			'issues'            => '',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/117',
 		),
-	),
-	'archive' => array(
 		'2.3.3' => array(
 			'version'           => '2.3.3',
 			'codename'          => 'aegolius',
@@ -41,7 +51,7 @@ $config['ko2'] = array(
 			'download'          => '',
 			'documentation'     => '',
 			'repository'        => 'http://dev.kohanaphp.com/projects/kohana2/repository/show/tags/2.3.3',
-			'issues'            => '',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/12',
 		),
 		'2.3.2' => array(
 			'version'           => '2.3.2',
@@ -50,7 +60,7 @@ $config['ko2'] = array(
 			'download'          => '',
 			'documentation'     => '',
 			'repository'        => 'http://dev.kohanaphp.com/projects/kohana2/repository/show/tags/2.3.2',
-			'issue'             => '',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/11',
 		),
 		'2.3.1' => array(
 			'version'           => '2.3.1',
@@ -59,7 +69,7 @@ $config['ko2'] = array(
 			'download'          => '',
 			'documentation'     => '',
 			'repository'        => 'http://dev.kohanaphp.com/projects/kohana2/repository/show/tags/2.3.1',
-			'issues'            => '',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/9',
 		),
 	),
 );
@@ -94,7 +104,7 @@ $config['ko3'] = array(
 			'download'          => 'http://dev.kohanaphp.com/attachments/download/1446/kohana-3.0.3.zip',
 			'documentation'     => 'http://www.kohanaphp.com/docs/3/',
 			'repository'        => 'http://github.com/kohana/kohana',
-			'issue'             => 'http://dev.kohanaphp.com/projects/kohana3/issues',
+			'issues'            => 'http://dev.kohanaphp.com/versions/show/153',
 		),
 	),
 	'archive' => array(),

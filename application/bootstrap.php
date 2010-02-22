@@ -94,10 +94,7 @@ catch (Exception $e)
 	// Log the error
 	Kohana::$log->add(Kohana::ERROR, Kohana::exception_text($e));
 
-	$preferred_lang = key(array_intersect_key(Request::accept_lang(), Kohana::config('kohana')->languages));
-	$error_page = $preferred_lang === NULL ? 'en/error' : $preferred_lang.'/error';
-
-	$request = Request::factory($error_page)->execute();
+	$request = Request::factory($preferred_lang.'/error')->execute();
 }
 
 /**

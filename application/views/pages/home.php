@@ -4,58 +4,58 @@
 	Although Kohana uses many common design patterns and concepts found in other frameworks, there are some things that make Kohana stand out:') ?></p>
 </div>
 <div class="span-22 prefix-1 last">
-	<div class="rotator">
-		<ul id="pages">
+	<div id="cycle" class="swap">
+		<ul id="cycle-tabs">
 			<li class="first">
-				<h3><a href="#"><?php echo __('Community Driven') ?></a></h3>
+				<p><a href="#"><?php echo __('Community Driven') ?></a></p>
 			</li>
 			<li>
-				<h3><a href="#"><?php echo __('Strict PHP 5 OOP') ?></a></h3>
+				<p><a href="#"><?php echo __('Strict PHP 5 OOP') ?></a></p>
 			</li>
 			<li>
-				<h3><a href="#"><?php echo __('Lightweight') ?></a></h3>
+				<p><a href="#"><?php echo __('Lightweight') ?></a></p>
 			</li>
 			<li>
-				<h3><a href="#"><?php echo __('Flexible') ?></a></h3>
+				<p><a href="#"><?php echo __('Flexible') ?></a></p>
 			</li>
 			<li>
-				<h3><a href="#"><?php echo __('Easy to Learn') ?></a></h3>
+				<p><a href="#"><?php echo __('Easy to Learn') ?></a></p>
 			</li>
 			<li class="last">
-				<h3><a href="#"><?php echo __('100% UTF-8 Compatible') ?></a></h3>
+				<p><a href="#"><?php echo __('100% UTF-8 Compatible') ?></a></p>
 			</li>
 		</ul>
-		<ul id="slides">
+		<ul id="cycle-slides">
 			<li class="active">
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
+				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
 				<h4><?php echo __('Community Driven') ?></h4>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions. Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 			</li>
 			<li>
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
+				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
 				<h4><?php echo __('Strict PHP 5 OOP') ?></h4>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 			</li>
 			<li>
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Lightweight" />
+				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Lightweight" />
 				<h4><?php echo __('Lightweight') ?></h4>
 				<p>Kohana has no dependencies on PECL extensions or PEAR libraries.</p>
 				<p>The code base is lean and mean, so it's easy to find your way around.</p>
 			</li>
 			<li>
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Flexible" />
+				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Flexible" />
 				<h4><?php echo __('Flexible') ?></h4>
 				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.  Modules can be added or created, which add functionility.  You can also transparently extend any class if you need something different.</p>
 			</li>
 			<li>
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_learn.png" alt="Easy to Learn" />
+				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_learn.png" alt="Easy to Learn" />
 				<h4><?php echo __('Easy to Learn') ?></h4>
 				<p>Kohana was well thought out, and is very easy to learn.  There is great documentation, and if you get stuck, you can ask for help on the forums or in IRC.</p>
 			</li>
 			<li>
-				<img class="addborder left" src="<?php echo URL::base(TRUE) ?>media/img/overview_utf8.png" alt="UTF-8 Compatible" />
+				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_utf8.png" alt="UTF-8 Compatible" />
 				<h4><?php echo __('100% UTF-8 Compatible') ?></h4>
 				<p>All Kohana functions are UTF-8 aware, so Kohana will work anywhere in the world!</p>
 			</li>
@@ -68,7 +68,7 @@
 </div>
 <div class="span-22 prefix-1">
 	<div class="span-14">
-		<div class="tan-box downloads">
+		<div class="green-box downloads">
 			<h2>Getting Started</h2>
 			<p>Kohana has a couple different versions to choose from. <?php echo html::anchor('versions','Which versions should I use?')?></p>
 			<div class="download-2x">
@@ -79,7 +79,7 @@
 					<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
 					<li>Long Term Support</li>
 				</ul>
-				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="download-button">Version <?php echo $versions['ko2']['version'] ?></a>
+				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko2']['version'] ?></a>
 			</div>
 			<div class="download-3x">
 				<h4>Kohana 3.x</h4>
@@ -89,7 +89,7 @@
 					<li>Advanced Routing</li>
 					<li>Rapid development cycle.</li>
 				</ul>
-				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="download-button">Version <?php echo $versions['ko3']['version'] ?></a>
+				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko3']['version'] ?></a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -102,8 +102,8 @@
 	</div>
 	</div>
 	<div class="span-7 prefix-1 last">
-		<div class="news green-box">
-			<h3>News From Kohana</h3>
+		<div class="news tan-box">
+			<h2>News From Kohana</h2>
 			<ul>
 				<li><a href="#">Kohana Joins the Software Freedom...</a></li>
 				<li><a href="#">Kohana 2.4.0 Released</a></li>
@@ -124,8 +124,5 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="span-22 prefix-1">
-	<hr />
+	<div class="clear"></div>
 </div>

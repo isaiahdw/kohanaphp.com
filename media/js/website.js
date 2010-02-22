@@ -6,20 +6,21 @@ $(document).ready(function(){
 			.filter('li:eq('+currSlideIndex+')').addClass('active'); 
 	}; 
 	
-	$('#slides').cycle({
+	$('#cycle-slides').cycle({
 		fx:      'fade',
 		speed:   'fast',
 		timeout: '8000',
-		pager:   '#pages',
+		pager:   '#cycle-tabs',
 		//pagerEvent: 'mouseover',
 		pauseOnPagerHover: true,
 		pagerAnchorBuilder: function(idx,slide) {
 			// return selector string for an existing anchor
-			return '#pages li:eq(' + idx + ') h3 a';
+			return '#cycle-tabs li:eq(' + idx + ') a';
 		},
 		after: function(curr, next, opts) {
 			var index = opts.currSlide;
-			$('#pages li:eq(' + index + ')').addClass('active');
+			$('#cycle-tabs li:eq(' + index + ')').addClass('active');
 		}
 	});
+	
 });

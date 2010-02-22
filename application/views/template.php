@@ -10,10 +10,24 @@
 	echo HTML::style('media/css/print.css',array('media'=>'print')), "\n";
 
 	echo HTML::script('media/js/jquery-1.3.2.min.js'), "\n";
-	echo HTML::script('media/js/website.js'), "\n";
 	echo HTML::script('media/js/jquery.cycle.min.js'), "\n";
+	echo HTML::script('media/js/website.js'), "\n";
+	
+	// Don't use cufon if the font doesn't support the language
+	$cufon_langs = array('en','es');
+	if (in_array(Request::instance()->param('lang'),$cufon_langs))
+	{
+		echo HTML::script('media/js/cufon-yui.js'), "\n";
+		echo HTML::script('media/js/Journal_400.font.js'), "\n";
+		echo HTML::script('media/js/Aller.font.js'), "\n";
+		echo "
+		<script type='text/javascript'>
+			Cufon.replace(' h1 ', { fontFamily: 'Journal' });
+			Cufon.replace(' h2,h3,h4,a.button,a.download-button,#testimonial ', { fontFamily: 'Aller' });
+		</script>";
+	}
 	?>
-
+	
 	<!--[if lt IE 8]>
 	<?php echo HTML::script('media/js/IE8.min.js') ?>
 	<![endif]-->
@@ -83,6 +97,9 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Fix Cufon in IE flicker, this should be before the </body> or before any analytics or other external scripts -->
+	<script type="text/javascript"> Cufon.now(); </script>
 
 </body>
 </html>

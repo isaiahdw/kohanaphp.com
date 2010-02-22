@@ -472,7 +472,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		margin: 6px 28px;
 	}
 
-#testimonials { padding-top:40px; padding-left:40px; }
+#testimonials { padding:20px 40px; margin-bottom:20px;}
 	#testimonials div#testimonial { background: url('../img/quote.png') top left no-repeat; padding-left:25px; font-size: 18px; }
 		#testimonials div#testimonial div.who { font-size: 14px; }
 			#testimonials #testimonial div.who a { color:#999999; }

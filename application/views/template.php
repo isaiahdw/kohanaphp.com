@@ -58,6 +58,7 @@
 					<li class="development last<?php echo $select == 'development'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'development')), __('Development')) ?></li>
 				</ul>
 			</div>
+			<?php if (count(Kohana::config('kohana')->languages) > 1): ?>
 			<div id="languages">
 				<ul>
 					<?php
@@ -69,6 +70,7 @@
 					?>
 				</ul>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 

@@ -115,6 +115,7 @@ $config['languages'] = array(
 		'name'=>'English',
 		'flag'=>'en_US',
 	),
+	/*
 	'pt' => array(
 		'name'=>'Português',
 		'flag'=>'pt_BR',
@@ -143,6 +144,7 @@ $config['languages'] = array(
 		'name'=>'Русский',
 		'flag'=>'ru_RU',
 	),
+	*/
 );
 
 return $config;

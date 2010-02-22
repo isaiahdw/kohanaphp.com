@@ -14,16 +14,14 @@
 	echo HTML::script('media/js/website.js'), "\n";
 	
 	// Don't use cufon if the font doesn't support the language
-	$cufon_langs = array('en','es');
+	$cufon_langs = array('en');
 	if (in_array(Request::instance()->param('lang'),$cufon_langs))
 	{
 		echo HTML::script('media/js/cufon-yui.js'), "\n";
-		echo HTML::script('media/js/Journal_400.font.js'), "\n";
 		echo HTML::script('media/js/Aller.font.js'), "\n";
 		echo "
 		<script type='text/javascript'>
-			Cufon.replace(' h1 ', { fontFamily: 'Journal' });
-			Cufon.replace(' h2,h3,h4,a.button,a.download-button,#testimonial ', { fontFamily: 'Aller' });
+			Cufon.replace(' h1,h2,h3,h4,a.button,a.download-button ');
 		</script>";
 	}
 	?>

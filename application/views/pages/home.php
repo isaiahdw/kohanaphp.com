@@ -76,7 +76,6 @@
 				<ul>
 					<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
 					<li>Powerful event handler</li>
-					<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
 					<li>Long Term Support</li>
 				</ul>
 				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko2']['version'] ?></a>
@@ -87,7 +86,7 @@
 					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
 					<li>Flexible file system structure</li>
 					<li>Advanced Routing</li>
-					<li>Rapid development cycle.</li>
+					<li>Rapid development cycle</li>
 				</ul>
 				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko3']['version'] ?></a>
 			</div>

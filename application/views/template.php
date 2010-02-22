@@ -31,17 +31,17 @@
 	</div>
 	<div id="header">
 		<div class="container">
-			<?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'))), HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>
+			<?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'))), HTML::image('media/img/kohana.png', array('alt' => 'Kohana: Develop Swiftly')), array('id' => 'logo')) ?>
 			<div id="menu">
 				<ul>
 					<?php
-					$select = Request::instance()->action;
+					$select = $request->action;
 					?>
-					<li class="home first<?php echo $select == 'home'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'))), __('Home')) ?></li>
-					<li class="download<?php echo $select == 'download'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'download')), __('Download')) ?></li>
-					<li class="userguide<?php echo $select == 'userguide'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'userguide')), __('User Guide')) ?></li>
-					<li class="community<?php echo $select == 'community'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'community')), __('Community')) ?></li>
-					<li class="development last<?php echo $select == 'development'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => Request::instance()->param('lang'), 'action'=>'development')), __('Development')) ?></li>
+					<li class="home first<?php echo $select == 'home'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'))), __('Home')) ?></li>
+					<li class="download<?php echo $select == 'download'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'), 'action'=>'download')), __('Download')) ?></li>
+					<li class="userguide<?php echo $select == 'userguide'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'), 'action'=>'userguide')), __('User Guide')) ?></li>
+					<li class="community<?php echo $select == 'community'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'), 'action'=>'community')), __('Community')) ?></li>
+					<li class="development last<?php echo $select == 'development'?' selected':''?>"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'), 'action'=>'development')), __('Development')) ?></li>
 				</ul>
 			</div>
 			<div id="languages">
@@ -49,8 +49,8 @@
 					<?php
 					foreach (Kohana::config('kohana')->languages as $lang => $inf)
 					{
-						$active = ($lang == Request::instance()->param('lang'))?' class="active"':'';
-						echo '<li'.$active.'>'.html::anchor(Route::get('page')->uri(array('lang'=>$lang,'action'=>Request::instance()->action)),html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'],'title'=>$inf['name']))).'</li>';
+						$active = ($lang == $request->param('lang'))?' class="active"':'';
+						echo '<li'.$active.'>'.html::anchor(Route::get('page')->uri(array('lang'=>$lang, 'action'=>$request->action)), html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'], 'title'=>$inf['name']))).'</li>';
 					}
 					?>
 				</ul>

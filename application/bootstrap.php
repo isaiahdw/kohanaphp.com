@@ -60,42 +60,28 @@ Kohana::$log->attach(new Kohana_Log_File(APPPATH.'logs'));
  */
 Kohana::$config->attach(new Kohana_Config_File);
 
-/**
- * No language
- */
-Route::set('lang_check', '')
-		->defaults(array(
-			'controller' => 'page',
-			'action'     => 'lang_redirect'));
+$preferred_lang = key(array_intersect_key(Request::accept_lang(), Kohana::config('kohana')->languages));
+
+$preferred_lang = $preferred_lang === NULL ? 'en' : $preferred_lang;
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('page', '<lang>(/<action>)', array('lang' => '[a-z]{2}', 'action' => '.+'))
+Route::set('page', '(<lang>(/<action>))', array('lang' => '[a-z]{2}', 'action' => '.+'))
 	->defaults(array(
 		'controller' => 'page',
 		'action'     => 'home',
-		'lang'       => 'en',
-	));
-
-// This 404 route will be hit if a url without a language is supplied, like "kohanaphp.com/download" or "kohanaphp.com/i_dont_exists"
-Route::set('404', '<page>',array('page'=>'.+'))
-	->defaults(array(
-		'controller' => 'page',
-		'action'	 => 'error',
-		'lang'       => 'en',
+		'lang'       => $preferred_lang,
 	));
 
 /**
  * Execute the main request using PATH_INFO. If no URI source is specified,
  * the URI will be automatically detected.
  */
-$request = Request::instance();
-
 try
 {
-	$request->execute();
+	$request = Request::instance()->execute();
 }
 catch (Exception $e)
 {
@@ -104,16 +90,14 @@ catch (Exception $e)
 	{
 		throw $e;
 	}
-	
+
 	// Log the error
 	Kohana::$log->add(Kohana::ERROR, Kohana::exception_text($e));
-	
-	// Set the response to the 404 page
-	$request->status = 404;
-	$request->response = View::factory('template',array(
-		'title' => 'Oops',
-		'content' => View::factory('pages/error'),
-	));
+
+	$preferred_lang = key(array_intersect_key(Request::accept_lang(), Kohana::config('kohana')->languages));
+	$error_page = $preferred_lang === NULL ? 'en/error' : $preferred_lang.'/error';
+
+	$request = Request::factory($error_page)->execute();
 }
 
 /**

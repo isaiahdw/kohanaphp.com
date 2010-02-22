@@ -10,13 +10,14 @@ class Controller_Page extends Controller_Website {
 	{
 		parent::before();
 
-		$lang = Request::instance()->param('lang');
-		$valid_langs = Kohana::config('kohana')->languages;
+		$lang = $this->request->param('lang');
 
 		// Make sure we have a valid language
-		if (! in_array($lang, array_keys($valid_langs)) AND Request::instance()->action !== 'lang_redirect' AND Request::instance()->action !== 'error')
+		if ( ! in_array($lang, array_keys(Kohana::config('kohana')->languages)))
 		{
-			throw new Kohana_Exception('Unable to find a route to match the URI: :uri (specified language was not found in config)', array(':uri' => $this->request->uri),404);
+			$this->request->action = 'error';
+			throw new Kohana_Request_Exception('Unable to find a route to match the URI: :uri (specified language was not found in config)',
+									   array(':uri' => $this->request->uri));
 		}
 
 		I18n::$lang = $lang;
@@ -32,12 +33,14 @@ class Controller_Page extends Controller_Website {
 			$title = ucwords(str_replace('_', ' ', $this->request->action));
 		}
 
-		$this->template->title   = $title;
+		$this->template->title = $title;
+
 		if ( ! kohana::find_file('views','pages/'.$this->request->action))
 		{
-			throw new Kohana_Exception('Could not find the view for the page you requested: :uri',array(':uri' => $this->request->uri),404);
+			$this->request->action = 'error';
 		}
 		$this->template->content = View::factory('pages/'.$this->request->action);
+		$this->template->request = $this->request;
 	}
 
 	public function action_home()
@@ -68,54 +71,24 @@ class Controller_Page extends Controller_Website {
 		$this->template->content->versions = $versions;
 	}
 
-	public function action_documentation()
-	{
-
-	}
-
-	public function action_community()
-	{
-
-	}
-
-	public function action_userguide()
-	{
-
-	}
-
-	public function action_team()
-	{
-
-	}
-	
-	public function action_development()
-	{
-		
-	}
-
-	public function action_help()
-	{
-
-	}
-
-	public function action_versions()
-	{
-
-	}
-
-	public function action_lang_redirect()
-	{
-		$preferred_lang = key(array_intersect_key(Request::accept_lang(), Kohana::config('kohana')->languages));
-
-		$preferred_lang = $preferred_lang === NULL ? 'en' : $preferred_lang;
-
-		$this->request->redirect(Route::get('page')->uri(array('lang' => $preferred_lang)));
-	}
-	
 	public function action_error()
 	{
-		throw new Kohana_Exception('Could not find the page you requested: :uri',array(':uri'=>$this->request->uri),404);
+		$this->template->title = 'Ooops';
 	}
+
+	public function action_documentation() {}
+
+	public function action_community() {}
+
+	public function action_userguide() {}
+
+	public function action_team() {}
+
+	public function action_development() {}
+
+	public function action_help() {}
+
+	public function action_versions() {}
 
 	protected function multi_array_key_exists($needle, $haystack)
 	{

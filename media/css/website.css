@@ -31,53 +31,57 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 #footer { float: left; clear: both; width: 100%; }
 
 #topline {
+	position:relative;
+	width: 100%;
+	min-width:950px;
+	height:25px;
+	margin:0;
+	padding:0;
+	overflow: hidden;
 	background-color: #00262f;
 	color: #F1F8DB;
-	width: 100%;
-	margin: 0px auto;
-	padding:1px 0;
-	overflow: hidden;
-	height:25px;
 	text-align:center;
 }
-	#topline ul#quicklinks {
+	#topline #quicklinks {
+		position:relative;
+		float:left; /* float:left makes the width of this element the width of its contents */
+		left:50%; /* left side of this element will be half way across the page */
 		margin:0;
 		padding:0;
 		list-style-type:none;
-		width:500px;
-		margin:0 auto;
 	}
-		#topline ul#quicklinks li {
+		#topline #quicklinks li {
+			position:relative;
 			float:left;
+			left:-50%; /* Move these elements to the left by 50% of the ul's width */
 			margin:0;
 			padding:6px 10px 6px 11px;
-			background:transparent url('../img/topline-divider.png') center left no-repeat scroll;
+			background:transparent url('../img/topline-divider.png') center left no-repeat;
 		}
-			#topline ul#quicklinks li a {
+			#topline #quicklinks li a {
 				padding:0;
 				margin:0;
 				float:left;
-				color:#FFF;
+				color:#F1F8DB;
 				font-weight:bold;
 				text-decoration: none;
 				height:13px;
 				font-size:13px; /* I know using px is bad form, but this is just so its consistent wherever its used, it also means this bar won't resize in old browsers, which is actually kinda nice */
 			}
 		/* Kohana logo in the top bar */
-		#topline ul#quicklinks li.first {
-			border-left:none;
+		#topline #quicklinks li.first {
 			padding-top:7px;
 			padding-bottom:5px;
 			background:none;
 		}
-			#topline ul#quicklinks li.first a { width:59px; height:13px; background: transparent url('../img/kohana-small.png') top left no-repeat scroll; }
-			#topline ul#quicklinks li.first.active a { background: transparent url('../img/kohana-small-active.png') top left no-repeat scroll; }
+			#topline #quicklinks li.first a { width:59px; height:13px; background: transparent url('../img/kohana-small.png') 0 0 no-repeat; }
+			#topline #quicklinks li.first.active a { background: transparent url('../img/kohana-small-active.png') 0 0 no-repeat; }
 
-		#topline ul#quicklinks li.active a {
+		#topline #quicklinks li.active a {
 			color:#ED900E;
 		}
 
-			#topline ul#quicklinks li a:hover {
+			#topline #quicklinks li a:hover {
 				color:#ED900E;
 			}
 
@@ -87,7 +91,6 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	position:relative;
 }
 .cleaner {
-	clear:both;
 	visibility:hidden;
 	margin:0;
 	padding:0;
@@ -96,8 +99,9 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 }
 
 #header {
+	clear:both;
 	padding:0px 0px;
-	background:#77c244 url(../img/header.png) center top repeat-x;
+	background:#77c244 url('../img/header.png') center top repeat-x;
 }
 	#header .container {
 		padding:20px 0px 15px;
@@ -124,7 +128,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 				float:left;
 				margin:0;
 				padding:0;
-				background:#83C018 url(../img/overlay2.png) repeat-x;
+				background:#83C018 url('../img/overlay2.png') 0 0 repeat-x;
 				border:1px solid #76B714;
 				border-right:none;
 				border-bottom:none;
@@ -142,17 +146,17 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 					line-height:1em;
 				}
 			#menu ul li:hover {
-				background: #76B714 url(../img/overlay2.png) repeat-x;
+				background:#76B714 url('../img/overlay2.png') 0 0 repeat-x;
 			}
 				#menu ul li:hover a {
 					color: #2C360B;
 				}
 			#menu ul li.selected {
-				background:#FCFDF7;
+				background:#F1F8DB;
 				border-color:#76B714;
 			}
 				#menu ul li.selected a {
-					color:#EE9323;
+					color:#ED900E;
 					text-shadow:none;
 				}
 			#menu ul li.first {
@@ -169,7 +173,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		position:absolute;
 		top:0px;
 		right:30px;
-		background:#65A826 url(../img/overlay2.png) repeat-x;
+		background:#65A826 url('../img/overlay2.png') 0 0 repeat-x;
 		border:1px solid #76B714;
 		padding:2px 6px 4px;
 		margin:0;
@@ -196,9 +200,9 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 				#languages ul li.active a {
 					background:#A3F224;
 				}
-#content { background: #f1f8db url(../img/content.png) center top repeat-x; }
-	#content .wrapper { padding-top: 1em; background: transparent url(../img/wrapper.png) center top no-repeat; }
-	#content .container { background-color: #FCFDF7; min-height: 350px; }
+#content { background: #f1f8db url('../img/content.png') center top repeat-x; }
+	#content .wrapper { padding-top:1em; background: url('../img/content-container.png') center top no-repeat; }
+	#content .container { }
 	#content hr { margin: 1em 0 1em; background-color: #F1F8DB; }
 	#content dl.inactive-team { font-size: 0.9em; }
 	#content p.intro {
@@ -210,7 +214,6 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	#content a { color: #004352; }
 	#content a:hover { color: #00758f; }
 	#content a:active { text-decoration: none; }
-
 
 #footer {
 	padding: 1em 0;
@@ -233,14 +236,14 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 			display: block;
 			width: 100px;
 			height: 24px;
-			background: transparent url(../img/kohana_dark.png) 0 0 no-repeat;
+			background: transparent url('../img/kohana_dark.png') 0 0 no-repeat;
 			text-indent: -3000em;
 		}
 	#footer .feed h6 {
 		margin-left: -14px;
 		padding-left: 14px;
 		letter-spacing: 0.11em;
-		background: transparent url(../img/feed.png) left center no-repeat;
+		background: transparent url('../img/feed.png') left center no-repeat;
 	}
 	#footer .feed ol {
 		margin: 0;
@@ -257,9 +260,9 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	text-align:center;
 }
 #content .tan-box {
-	border:1px solid #DBE5BC;
-	background-color: #F1F8DB;
 	padding: 8px 16px 8px;
+	background:#E3EDC4;
+	border:1px solid #D2DDA8;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -267,8 +270,8 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	-khtml-border-radius: 8px;
 }
 #content .green-box {
-	background: #C1F788;
-	border:1px solid #B0DB7D;
+	background: #9CE251;
+	border:1px solid #99BC6D;
 	padding: 8px 16px;
 	border-radius:8px;
 	-moz-border-radius:8px;
@@ -284,7 +287,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	color:#3F5C0B;
 	text-shadow:0.1em 0.1em 1px #76B714;
 	font-weight:bold;
-	background:#83C018 url(../img/overlay2.png) repeat-x;
+	background:#83C018 url('../img/overlay2.png') 0 0 repeat-x;
 	border:1px solid #76B714;
 	border-radius: 8px;
 	line-height:2.4em;
@@ -302,7 +305,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	color: #F78900;
 	font-size: 1.2em;
 	line-height: 0;
-	background:url(../img/download_button.png) no-repeat 0px 0px;
+	background:url('../img/download_button.png') 0 0 no-repeat;
 	display: block;
 	width: 100px;
 	height: 13px;
@@ -310,7 +313,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	text-decoration: none;
 }
 	#content a.download-button:hover {
-		background:url(../img/download_button.png) no-repeat 0px -45px;
+		background:url('../img/download_button.png') 0 -45px no-repeat;
 	}
 
 #content .version {
@@ -325,14 +328,14 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 /* Homepage specific elements */
 #content .built img { border: solid 1px #10382f; }
 #content .showcase div { height: 130px; overflow: hidden; }
-#content .showcase h4 { border-bottom: 1px solid #F1F8DB; background: transparent url(../img/icons/check.png) no-repeat scroll 0 0; line-height: 16px; padding-left:20px; }
+#content .showcase h4 { border-bottom: 1px solid #F1F8DB; background: transparent url('../img/icons/check.png') 0 0 no-repeat; line-height: 16px; padding-left:20px; }
 
 #pages {
-	background:#F1F8DB;
+	background:#E3EDC4;
 	float:right;
 	width: 269px;
 	height:226px;
-	border:1px solid #DBE5BC;
+	border:1px solid #D2DDA8;
 	border-left:none;
 	padding:0;
 	margin: 0;
@@ -347,7 +350,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		list-style: none;
 		padding: 7px 0 7px 8px;
 		margin: 0 -1px 0 0;
-		border-left:1px solid #B0DB7D;
+		border-left:1px solid #99BC6D;
 		border-radius: 0 8px 8px 0;
 		-moz-border-radius: 0 8px 8px 0;
 		-webkit-border-radius: 0 8px 8px 0;
@@ -359,7 +362,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 			padding:2px 0 0;
 			margin: 0;
 			font-size: 1.2em;
-			background: transparent url(../img/icons/check.png) no-repeat scroll 0 0;
+			background: transparent url('../img/icons/check.png') 0 0 no-repeat;
 			padding-left: 30px;
 		}
 			#pages li h3 a {
@@ -370,13 +373,13 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 					color:#ED890E;
 				}
 	#pages li.active {
-		background: #C1F788;
-		border:1px solid #B0DB7D;
+		background: #9CE251;
+		border:1px solid #99BC6D;
 		border-left:none;
 		padding: 6px 0 6px 9px;
 	}
 		#pages li.active h3 {
-			background:transparent url(../img/icons/check_active.png) no-repeat scroll 0 0;
+			background:transparent url('../img/icons/check_active.png') 0 0 no-repeat;
 			font-size:1.2em;
 			text-decoration: underline;
 		}
@@ -391,14 +394,14 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	}
 
 ul#slides {
-	background:#C1F788;
+	background:#9CE251;
 	float:left;
 	width: 599px;
 	height:226px;
 	padding:0;
 	margin:0;
 	list-style-type:none;
-	border:1px solid #B0DB7D;
+	border:1px solid #99BC6D;
 	border-right:none;
 	border-radius: 8px 0 0 8px;
 	-moz-border-radius: 8px 0 0 8px;
@@ -448,15 +451,15 @@ ul#slides {
 	}
 
 #testimonials { padding-top:40px; padding-left:40px; }
-	#testimonials div#testimonial { background: url('../img/quote.png') top left no-repeat scroll; padding-left:25px; font-size: 18px; }
+	#testimonials div#testimonial { background: url('../img/quote.png') top left no-repeat; padding-left:25px; font-size: 18px; }
 		#testimonials div#testimonial div.who { font-size: 14px; }
 			#testimonials #testimonial div.who a { color:#999999; }
 
 #content .news {}
 	#content .news ul { list-style: none; margin: 0pt; padding: 0pt; }
-	#content .news #rss_feed { background: transparent url(../img/icons/rss_feed.png) center left no-repeat; padding-left: 20px; }
-	#content .news #email_sub { background: transparent url(../img/icons/email.png) center left no-repeat; padding-left: 20px; }
-	#content .news #follow_twitter { background: transparent url(../img/icons/twitter.png) center left no-repeat; padding-left: 20px; }
+	#content .news #rss_feed { background: transparent url('../img/icons/rss_feed.png') center left no-repeat; padding-left: 20px; }
+	#content .news #email_sub { background: transparent url('../img/icons/email.png') center left no-repeat; padding-left: 20px; }
+	#content .news #follow_twitter { background: transparent url('../img/icons/twitter.png') center left no-repeat; padding-left: 20px; }
 
 /* Download Page */
 #download {}

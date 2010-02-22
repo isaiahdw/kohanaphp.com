@@ -14,9 +14,7 @@
 					<p class="title">Kohana 2.x Current Release:</p>
 					<h2>v<?php echo $version?> <?php echo empty($details['codename']) ? '' : '<small class="fancy">"'.$details['codename'].'"</small>'?></h2>
 					<p>
-						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
-						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
-						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Changelog') : ''  ?>
 						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
 					</p>
 					<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Version '.$version,array('class'=>'download-button')) : '' ?>
@@ -33,8 +31,6 @@
 					<h3 class="bottom">v<?php echo $version?> <?php echo empty($details['codename']) ? '' : '<small class="fancy">"'.$details['codename'].'"</small>'?></h3>
 					<p>
 						<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
-						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
-						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
 						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
 						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
 					</p>
@@ -51,9 +47,7 @@
 					<h3 class="bottom">v<?php echo $version?> <?php echo empty($details['codename']) ? '' : '<small class="fancy">"'.$details['codename'].'"</small>'?></h3>
 					<p>
 						<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
-						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
-						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
-						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Changelog') : ''  ?>
 						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
 					</p>
 				<?php endforeach; ?>
@@ -69,9 +63,7 @@
 					<p class="title">Kohana 3.x Current Release:</p>
 					<h2>v<?php echo $version?> <?php echo empty($details['codename']) ? '' : '<small class="fancy">"'.$details['codename'].'"</small>'?></h2>
 					<p>
-						<?php echo empty($details['status']) ? '' : HTML::anchor($details['status'], 'Status')  ?>
-						<?php echo empty($details['changelog']) ? '' : HTML::anchor($details['changelog'], 'Changelog')  ?>
-						<?php echo empty($details['issues']) ? '' : HTML::anchor($details['issues'], 'Issues')  ?>
+						<?php echo empty($details['issues']) ? '' : HTML::anchor($details['issues'], 'Changelog')  ?>
 						<?php echo empty($details['repository']) ? '' : HTML::anchor($details['repository'], 'Repository')  ?>
 					</p>
 					<?php echo empty($details['download']) ? '' : HTML::anchor('download?get='.$version, 'Version '.$version,array('class'=>'download-button')) ?>
@@ -87,8 +79,6 @@
 					<h3 class="bottom">v<?php echo $version?> <?php echo empty($details['codename']) ? '' : '<small class="fancy">"'.$details['codename'].'"</small>'?></h3>
 					<p>
 						<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
-						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
-						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
 						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
 						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
 					</p>
@@ -104,9 +94,7 @@
 					<h3 class="bottom">v<?php echo $version?> <?php echo empty($details['codename']) ? '' : '<small class="fancy">"'.$details['codename'].'"</small>'?></h3>
 					<p>
 						<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Download (zip)') : '' ?>
-						<?php echo ! empty($details['status']) ? HTML::anchor($details['status'], 'Status') : ''  ?>
-						<?php echo ! empty($details['changelog']) ? HTML::anchor($details['changelog'], 'Changelog') : ''  ?>
-						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Issues') : ''  ?>
+						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Changelog') : ''  ?>
 						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
 					</p>
 				<?php endforeach; ?>

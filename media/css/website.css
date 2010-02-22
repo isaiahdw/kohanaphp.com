@@ -72,15 +72,15 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		}
 			#topline ul#quicklinks li.first a { width:59px; height:13px; background: transparent url('../img/kohana-small.png') top left no-repeat scroll; }
 			#topline ul#quicklinks li.first.active a { background: transparent url('../img/kohana-small-active.png') top left no-repeat scroll; }
-		
+
 		#topline ul#quicklinks li.active a {
 			color:#ED900E;
 		}
-			
+
 			#topline ul#quicklinks li a:hover {
 				color:#ED900E;
 			}
-		
+
 .container {
 	width:950px;
 	margin:0px auto;
@@ -106,7 +106,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		margin:0px 20px;
 		padding:0px 8px;
 	}
-		
+
 	#menu {
 		position:absolute;
 		bottom:0px;
@@ -164,7 +164,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 				-moz-border-radius:0px 6px 0px 0px;
 				border-radius: 0px 6px 0px 0px;
 			}
-		
+
 	#languages {
 		position:absolute;
 		top:0px;
@@ -210,7 +210,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	#content a { color: #004352; }
 	#content a:hover { color: #00758f; }
 	#content a:active { text-decoration: none; }
-	
+
 
 #footer {
 	padding: 1em 0;
@@ -321,12 +321,12 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	#content .version.first {
 		margin-right:40px;
 	}
-	
+
 /* Homepage specific elements */
 #content .built img { border: solid 1px #10382f; }
 #content .showcase div { height: 130px; overflow: hidden; }
 #content .showcase h4 { border-bottom: 1px solid #F1F8DB; background: transparent url(../img/icons/check.png) no-repeat scroll 0 0; line-height: 16px; padding-left:20px; }
-	
+
 #pages {
 	background:#F1F8DB;
 	float:right;
@@ -389,7 +389,7 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 		top:-1px;
 		margin-bottom:-1px;
 	}
-	
+
 ul#slides {
 	background:#C1F788;
 	float:left;
@@ -405,6 +405,7 @@ ul#slides {
 	-webkit-border-radius: 8px 0 0 8px;
 	-opera-border-radius: 8px 0 0 8px;
 	-khtml-border-radius: 8px 0 0 8px;
+	overflow: hidden;
 }
 	#slides li {
 		padding: 10px;
@@ -456,7 +457,7 @@ ul#slides {
 	#content .news #rss_feed { background: transparent url(../img/icons/rss_feed.png) center left no-repeat; padding-left: 20px; }
 	#content .news #email_sub { background: transparent url(../img/icons/email.png) center left no-repeat; padding-left: 20px; }
 	#content .news #follow_twitter { background: transparent url(../img/icons/twitter.png) center left no-repeat; padding-left: 20px; }
-	
+
 /* Download Page */
 #download {}
 	#download #starting_download {

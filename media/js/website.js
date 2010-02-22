@@ -1,15 +1,15 @@
 $(document).ready(function(){
-			
+
 	// redefine cycle's updateActivePagerLink
-	$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
-		$(pager).find('li').removeClass('active') 
-			.filter('li:eq('+currSlideIndex+')').addClass('active'); 
-	}; 
-	
+	$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) {
+		$(pager).find('li').removeClass('active')
+			.filter('li:eq('+currSlideIndex+')').addClass('active');
+	};
+
 	$('#slides').cycle({
 		fx:      'fade',
 		speed:   'fast',
-		timeout: '8000',
+		timeout: '12000',
 		pager:   '#pages',
 		//pagerEvent: 'mouseover',
 		pauseOnPagerHover: true,

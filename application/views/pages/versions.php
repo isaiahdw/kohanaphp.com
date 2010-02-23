@@ -17,7 +17,7 @@
 
 	<h4>Did that help you decide what Kohana version is best for you?</h4>
 	<ul>
-		<li><?php echo html::anchor(Route::get('page')->uri(array('action' => 'download', 'lang' => Request::instance()->param('lang'))),'Yes, take me to the downloage page please!') ?></li>
-		<li><?php echo html::anchor(Route::get('page')->uri(array('action' => 'community', 'lang' => Request::instance()->param('lang'))),'No, I\'m still confused.') ?></li>
+		<li><?php echo HTML::anchor(Route::get('page')->uri(array('action' => 'download', 'lang' => Request::instance()->param('lang'))),'Yes, take me to the downloage page please!') ?></li>
+		<li><?php echo HTML::anchor(Route::get('page')->uri(array('action' => 'community', 'lang' => Request::instance()->param('lang'))),'No, I\'m still confused.') ?></li>
 	</ul>
 </div>

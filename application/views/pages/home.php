@@ -77,7 +77,6 @@
 					<li>Uses the <abbr title="Model View Controller">MVC</abbr> Pattern</li>
 					<li>Powerful Event Handler</li>
 					<li>Long Term Support</li>
-					<li>Long Term Support</li>
 				</ul>
 				<?php echo HTML::anchor
 				(
@@ -92,7 +91,6 @@
 					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> Pattern</li>
 					<li>Flexible File System Structure</li>
 					<li>Advanced Routing</li>
-					<li>Rapid Development Cycle</li>
 				</ul>
 				<?php echo HTML::anchor
 				(
@@ -117,7 +115,6 @@
 			<h3>Stay Informed</h3>
 			<ul>
 				<li><a id="rss_feed" href="#">RSS News Feed</a></li>
-				<li id="email_sub">Updates by Email</li>
 				<li id="follow_twitter">Follow Us on Twitter</li>
 			</ul>
 		</div>

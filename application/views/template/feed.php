@@ -1,7 +1,7 @@
 <?php
 
-// Displayed feeds are cached for 2 minutes
-if ( ! Fragment::load('feed:'.$feed.':'.$limit, Date::MINUTE * 2)):
+// Displayed feeds are cached for 5 minutes
+if ( ! Fragment::load('feed:'.$feed.':'.$limit, Date::MINUTE * 5)):
 
 // Parse the feed
 $items = Feed::parse($feed, $limit);
@@ -12,7 +12,7 @@ isset($title) or $title = 'title';
 
 ?>
 <?php foreach ($items as $item): ?>
-<li><?php echo HTML::anchor($item[$link], $item[$title]) ?></li>
+<li><?php echo HTML::anchor($item[$link], Text::limit_chars($item[$title], 50)) ?></li>
 <?php endforeach ?>
 <li>&raquo; <?php echo HTML::anchor($feed, $more) ?>
 <?php Fragment::save(); endif ?>

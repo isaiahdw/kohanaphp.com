@@ -66,7 +66,7 @@
 					foreach (Kohana::config('kohana')->languages as $lang => $inf)
 					{
 						$active = ($lang == $request->param('lang'))?' class="active"':'';
-						echo '<li'.$active.'>'.html::anchor(Route::get('page')->uri(array('lang'=>$lang, 'action'=>$request->action)), html::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'], 'title'=>$inf['name']))).'</li>';
+						echo '<li'.$active.'>'.HTML::anchor(Route::get('page')->uri(array('lang'=>$lang, 'action'=>$request->action)), HTML::image('media/img/flags/'.$inf['flag'].'.png',array('alt'=>$inf['name'], 'title'=>$inf['name']))).'</li>';
 					}
 					?>
 				</ul>
@@ -86,17 +86,32 @@
 	<div id="footer">
 		<div class="container">
 			<div class="copyright span-6 prefix-1">
-				<p class="caps top"><?php echo HTML::anchor('', 'Kohana', array('class' => 'logo')) ?>
+				<p class="caps top"><?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'))), 'Kohana', array('class' => 'logo')) ?>
 					Copyright &copy;2007-<?php echo date('Y') ?><br/>
 					All rights reserved<br/>
-					The awesome <?php echo HTML::anchor(Route::get('page')->uri(array('lang'=>$request->param('lang'), 'action'=>'team')), 'Kohana Team') ?>
+					The awesome <?php echo HTML::anchor(Route::get('page')->uri(array('lang' => $request->param('lang'), 'action'=>'team')), 'Kohana Team') ?>
 				</p>
 			</div>
 			<div class="discussions feed span-8">
-
+				<h6 class="caps top"><?php echo __('Latest Discussions') ?></h6>
+				<ol>
+					<?php echo View::factory('template/feed', array(
+					'feed' => 'http://forum.kohanaphp.com/search.php?PostBackAction=Search&Advanced=1&Type=Comments&Feed=RSS2',
+					'limit' => 5,
+					'more' => 'More discussions',
+					)) ?>
+				</ol>
 			</div>
 			<div class="changes feed span-8 suffix-1 last">
-
+				<h6 class="caps top"><?php echo __('Latest Development') ?></h6>
+				<ol>
+					<?php echo View::factory('template/feed', array(
+					'feed' => 'http://dev.kohanaphp.com/projects/kohana/activity.atom?show_changesets=1',
+					'limit' => 5,
+					'link' => 'id',
+					'more' => 'More development',
+					)) ?>
+				</ol>
 			</div>
 		</div>
 	</div>

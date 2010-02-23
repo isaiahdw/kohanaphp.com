@@ -76,7 +76,6 @@
 				<ul>
 					<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
 					<li>Powerful event handler</li>
-					<li>Originally based on <a href="http://www.codeigniter.com">CodeIgniter</a></li>
 					<li>Long Term Support</li>
 				</ul>
 				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko2']['version'] ?></a>
@@ -87,19 +86,12 @@
 					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
 					<li>Flexible file system structure</li>
 					<li>Advanced Routing</li>
-					<li>Rapid development cycle.</li>
+					<li>Rapid development cycle</li>
 				</ul>
 				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko3']['version'] ?></a>
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div id="testimonials">
-			<h3>What Developers are Saying</h3>
-			<div id="testimonial">
-				Kohana is fantastic. I'm in love with PHP again!
-			<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
-		</div>
-	</div>
 	</div>
 	<div class="span-7 prefix-1 last">
 		<div class="news tan-box">
@@ -117,12 +109,16 @@
 				<li id="email_sub">Updates by Email</li>
 				<li id="follow_twitter">Follow Us on Twitter</li>
 			</ul>
-			<h3>You Can Help</h3>
-			<p>If you use Kohana and find it worth something, please consider donating. Your donations will be directly used to cover the costs of maintaining Kohana.</p>
-			<div class="center">
-				<?php echo html::anchor('#','Donate to Kohana',array('class'=>'button')) ?>
-			</div>
 		</div>
 	</div>
 	<div class="clear"></div>
+</div>
+
+<div class="span-22 prefix-1">
+	<div id="testimonials">
+		<h3>What Developers are Saying</h3>
+		<div id="testimonial">
+			Kohana is fantastic. I'm in love with PHP again!  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
+	</div>
 </div>

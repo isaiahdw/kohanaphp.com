@@ -12,7 +12,7 @@
 	echo HTML::script('media/js/jquery-1.3.2.min.js'), "\n";
 	echo HTML::script('media/js/jquery.cycle.min.js'), "\n";
 	echo HTML::script('media/js/website.js'), "\n";
-	
+
 	// Don't use cufon if the font doesn't support the language
 	$cufon_langs = array('en');
 	if (in_array(Request::instance()->param('lang'),$cufon_langs))
@@ -25,10 +25,13 @@
 		</script>";
 	}
 	?>
-	
+
 	<!--[if lt IE 8]>
 	<?php echo HTML::script('media/js/IE8.min.js') ?>
 	<![endif]-->
+
+	<?php foreach ($meta_tags as $meta)
+		echo '<meta'.HTML::attributes($meta).' />' ?>
 
 </head>
 <body>
@@ -97,7 +100,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Fix Cufon in IE flicker, this should be before the </body> or before any analytics or other external scripts -->
 	<script type="text/javascript"> Cufon.now(); </script>
 

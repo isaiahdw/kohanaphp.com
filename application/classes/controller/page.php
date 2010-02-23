@@ -40,7 +40,8 @@ class Controller_Page extends Controller_Website {
 			$this->request->action = 'error';
 		}
 		$this->template->content = View::factory('pages/'.$this->request->action);
-		$this->template->request = $this->request;
+		$this->template->set_global('request', $this->request);
+		$this->template->meta_tags = array();
 	}
 
 	public function action_home()

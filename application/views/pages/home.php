@@ -74,21 +74,32 @@
 			<div class="download-2x">
 				<h4>Kohana 2.x</h4>
 				<ul>
-					<li>Uses the <abbr title="Model View Controller">MVC</abbr> pattern</li>
-					<li>Powerful event handler</li>
+					<li>Uses the <abbr title="Model View Controller">MVC</abbr> Pattern</li>
+					<li>Powerful Event Handler</li>
+					<li>Long Term Support</li>
 					<li>Long Term Support</li>
 				</ul>
-				<a href="<?php echo url::base().'download?get='.$versions['ko2']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko2']['version'] ?></a>
+				<?php echo HTML::anchor
+				(
+					Route::get('page')->uri(array('lang' => $request->param('lang'), 'action' => 'download')).'?get='.$versions['ko2']['version'],
+					'Kohana '.$versions['ko2']['version'],
+					array('class' => 'download-button')
+				) ?>
 			</div>
 			<div class="download-3x">
 				<h4>Kohana 3.x</h4>
 				<ul>
-					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> pattern</li>
-					<li>Flexible file system structure</li>
+					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> Pattern</li>
+					<li>Flexible File System Structure</li>
 					<li>Advanced Routing</li>
-					<li>Rapid development cycle</li>
+					<li>Rapid Development Cycle</li>
 				</ul>
-				<a href="<?php echo url::base().'download?get='.$versions['ko3']['version'] ?>" class="download-button">Kohana <?php echo $versions['ko3']['version'] ?></a>
+				<?php echo HTML::anchor
+				(
+					Route::get('page')->uri(array('lang' => $request->param('lang'), 'action' => 'download')).'?get='.$versions['ko3']['version'],
+					'Kohana '.$versions['ko3']['version'],
+					array('class' => 'download-button')
+				) ?>
 			</div>
 			<div class="clear"></div>
 		</div>

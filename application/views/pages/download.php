@@ -5,7 +5,7 @@
 			<p>Thank you for downloading Kohana. If your download doesn't start in a few seconds, <a href="<?php echo $download_url?>">click here to start it manually</a>.</p>
 		</div>
 	<?php endif; ?>
-	<p class="intro">Kohana has a couple different versions to choose from. <?php echo html::anchor(Route::get('page')->uri(array('action' => 'versions', 'lang' => Request::instance()->param('lang'))),'Not sure which version is best for you?') ?></p>
+	<p class="intro">Kohana has a couple different versions to choose from. <?php echo HTML::anchor(Route::get('page')->uri(array('action' => 'versions', 'lang' => Request::instance()->param('lang'))),'Not sure which version is best for you?') ?></p>
 	<div class="version first">
 		<div class="green-box release">
 

@@ -46,7 +46,7 @@
 			</li>
 			<li>
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Flexible" />
-				<h4><?php echo __('Flexible') ?></h4>
+				<h3><?php echo __('Flexible') ?></h3>
 				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.  Modules can be added or created, which add functionility.  You can also transparently extend any class if you need something different.</p>
 			</li>
 			<li>
@@ -70,13 +70,12 @@
 	<div class="span-14">
 		<div class="green-box downloads">
 			<h2>Getting Started</h2>
-			<p>Kohana has a couple different versions to choose from. <?php echo html::anchor('versions','Which versions should I use?')?></p>
+			<p>Kohana has a couple different versions to choose from. <?php echo HTML::anchor('versions','Which versions should I use?')?></p>
 			<div class="download-2x">
 				<h4>Kohana 2.x</h4>
 				<ul>
 					<li>Uses the <abbr title="Model View Controller">MVC</abbr> Pattern</li>
 					<li>Powerful Event Handler</li>
-					<li>Long Term Support</li>
 					<li>Long Term Support</li>
 				</ul>
 				<?php echo HTML::anchor
@@ -92,7 +91,6 @@
 					<li>Uses the <abbr title="Hierarchical Model View Controller">HMVC</abbr> Pattern</li>
 					<li>Flexible File System Structure</li>
 					<li>Advanced Routing</li>
-					<li>Rapid Development Cycle</li>
 				</ul>
 				<?php echo HTML::anchor
 				(
@@ -117,7 +115,6 @@
 			<h3>Stay Informed</h3>
 			<ul>
 				<li><a id="rss_feed" href="#">RSS News Feed</a></li>
-				<li id="email_sub">Updates by Email</li>
 				<li id="follow_twitter">Follow Us on Twitter</li>
 			</ul>
 		</div>

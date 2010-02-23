@@ -440,8 +440,8 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 	#cycle #cycle-slides li.active {
 		display:block;
 	}
-	#cycle #cycle-slides li h4 { margin-top:0;}
-	#cycle #cycle-slides li img { background:#FFF; margin-left:10px; float:right; }
+	#cycle #cycle-slides li img { background:#FFF; margin-left:15px; float:right; }
+	#cycle #cycle-slides li h3 { margin-top:0;}
 
 #content .downloads {}
 	#content .downloads .download-2x {

@@ -22,7 +22,7 @@
 				<p><a href="#"><?php echo __('Easy to Learn') ?></a></p>
 			</li>
 			<li class="last">
-				<p><a href="#"><?php echo __('100% UTF-8 Compatible') ?></a></p>
+				<p><a href="#"><?php echo __('Multi-Language Support') ?></a></p>
 			</li>
 		</ul>
 		<ul id="cycle-slides">
@@ -56,7 +56,7 @@
 			</li>
 			<li>
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_utf8.png" alt="UTF-8 Compatible" />
-				<h4><?php echo __('100% UTF-8 Compatible') ?></h4>
+				<h4><?php echo __('Multi-Language Support') ?></h4>
 				<p>All Kohana functions are UTF-8 aware, so Kohana will work anywhere in the world!</p>
 			</li>
 		</ul>
@@ -126,10 +126,15 @@
 </div>
 
 <div class="span-22 prefix-1">
-	<div id="testimonials">
+	<div id="testimonials" class="span-14">
 		<h3>What Developers are Saying</h3>
 		<div id="testimonial">
-			Kohana is fantastic. I'm in love with PHP again!  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
+			Kohana is fantastic. I'm in love with PHP again!
+			<div class="who">— <a href="http://www.example.com">Random Developer (example.com)</a></div>
+		</div>
+	</div>
+	<div class="span-7 prefix-1 last">
+		<h3>Who Uses Kohana?</h3>
+		<p>Rotate company logos here...</p>
 	</div>
 </div>

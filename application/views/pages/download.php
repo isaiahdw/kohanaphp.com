@@ -2,7 +2,7 @@
 	<h1>Get yours today!</h1>
 	<?php if ($download_url): ?>
 		<div id="starting_download">
-			<p>Thank you for downloading Kohana. If your download doesn't start in a few seconds, <a href="<?php echo $download_url?>">click here to start it manually</a>.</p>
+			<p>Thank you for downloading Kohana <?php echo html::chars(Arr::get($_GET, 'get')) ?>. If your download doesn't start in a few seconds, <a href="<?php echo $download_url?>">click here to start it manually</a>.</p>
 		</div>
 	<?php endif; ?>
 	<p class="intro">Kohana has a couple different versions to choose from. <?php echo HTML::anchor(Route::get('page')->uri(array('action' => 'versions', 'lang' => Request::instance()->param('lang'))),'Not sure which version is best for you?') ?></p>

@@ -17,7 +17,14 @@
 						<?php echo ! empty($details['issues']) ? HTML::anchor($details['issues'], 'Changelog') : ''  ?>
 						<?php echo ! empty($details['repository']) ? HTML::anchor($details['repository'], 'Repository') : ''  ?>
 					</p>
-					<?php echo ! empty($details['download']) ? HTML::anchor('download?get='.$version, 'Kohana '.$version,array('class'=>'download-button')) : '' ?>
+					<?php if ( ! empty($details['download'])): ?>
+						<?php echo HTML::anchor
+						(
+							Route::get('page')->uri(array('lang' => $request->param('lang'), 'action' => 'download')).'?get='.$version,
+							'Kohana '.$version,
+							array('class' => 'download-button')
+						) ?>
+					<?php endif; ?>
 				<?php endforeach; ?>
 			<?php else: ?>
 				<p>No release versions are available at this time.</p>
@@ -66,7 +73,14 @@
 						<?php echo empty($details['issues']) ? '' : HTML::anchor($details['issues'], 'Changelog')  ?>
 						<?php echo empty($details['repository']) ? '' : HTML::anchor($details['repository'], 'Repository')  ?>
 					</p>
-					<?php echo empty($details['download']) ? '' : HTML::anchor('download?get='.$version, 'Kohana '.$version,array('class'=>'download-button')) ?>
+					<?php if ( ! empty($details['download'])): ?>
+						<?php echo HTML::anchor
+						(
+							Route::get('page')->uri(array('lang' => $request->param('lang'), 'action' => 'download')).'?get='.$version,
+							'Kohana '.$version,
+							array('class' => 'download-button')
+						) ?>
+					<?php endif; ?>
 				<?php endforeach; ?>
 			<?php else: ?>
 				<p>No release versions are available at this time.</p>

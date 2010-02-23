@@ -12,7 +12,7 @@ isset($title) or $title = 'title';
 
 ?>
 <?php foreach ($items as $item): ?>
-<li><?php echo HTML::anchor($item[$link], Text::limit_chars($item[$title], 50)) ?></li>
+<li><?php echo HTML::anchor($item[$link], html::chars(Text::limit_chars($item[$title], 50))) ?></li>
 <?php endforeach ?>
-<li>&raquo; <?php echo HTML::anchor($feed, $more) ?>
+<li>&raquo; <?php echo HTML::anchor($feed, $more) ?></li>
 <?php Fragment::save(); endif ?>

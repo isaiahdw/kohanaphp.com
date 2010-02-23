@@ -89,7 +89,7 @@
 				<p class="caps top"><?php echo HTML::anchor('', 'Kohana', array('class' => 'logo')) ?>
 					Copyright &copy;2007-<?php echo date('Y') ?><br/>
 					All rights reserved<br/>
-					The awesome <?php echo HTML::anchor('team', 'Kohana Team') ?>
+					The awesome <?php echo HTML::anchor(Route::get('page')->uri(array('lang'=>$request->param('lang'), 'action'=>'team')), 'Kohana Team') ?>
 				</p>
 			</div>
 			<div class="discussions feed span-8">

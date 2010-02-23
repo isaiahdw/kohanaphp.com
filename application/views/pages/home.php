@@ -28,35 +28,35 @@
 		<ul id="cycle-slides">
 			<li class="active">
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_community.png" alt="Kohana Community" />
-				<h4><?php echo __('Community Driven') ?></h4>
+				<h3><?php echo __('Community Driven') ?></h3>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions. Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 				<p>Kohana development is driven by a team of dedicated people that need a framework for fast, powerful solutions.</p>
 			</li>
 			<li>
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_strictphp.png" alt="Strict PHP 5 OOP" />
-				<h4><?php echo __('Strict PHP 5 OOP') ?></h4>
+				<h3><?php echo __('Strict PHP 5 OOP') ?></h3>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 				<p>Offers many benefits: visibility protection, automatic class loading, overloading, interfaces, abstracts, and singletons.</p>
 			</li>
 			<li>
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_lightweight.png" alt="Lightweight" />
-				<h4><?php echo __('Lightweight') ?></h4>
+				<h3><?php echo __('Lightweight') ?></h3>
 				<p>Kohana has no dependencies on PECL extensions or PEAR libraries.</p>
 				<p>The code base is lean and mean, so it's easy to find your way around.</p>
 			</li>
 			<li>
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_flexible.png" alt="Flexible" />
-				<h4><?php echo __('Flexible') ?></h4>
+				<h3><?php echo __('Flexible') ?></h3>
 				<p>Almost every part of Kohana can be overloaded or extended without editing core system files.  Modules can be added or created, which add functionility.  You can also transparently extend any class if you need something different.</p>
 			</li>
 			<li>
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_learn.png" alt="Easy to Learn" />
-				<h4><?php echo __('Easy to Learn') ?></h4>
+				<h3><?php echo __('Easy to Learn') ?></h3>
 				<p>Kohana was well thought out, and is very easy to learn.  There is great documentation, and if you get stuck, you can ask for help on the forums or in IRC.</p>
 			</li>
 			<li>
 				<img class="addborder" src="<?php echo URL::base(TRUE) ?>media/img/overview_utf8.png" alt="UTF-8 Compatible" />
-				<h4><?php echo __('Multi-Language Support') ?></h4>
+				<h3><?php echo __('Multi-Language Support') ?></h3>
 				<p>All Kohana functions are UTF-8 aware, so Kohana will work anywhere in the world!</p>
 			</li>
 		</ul>
@@ -70,7 +70,7 @@
 	<div class="span-14">
 		<div class="green-box downloads">
 			<h2>Getting Started</h2>
-			<p>Kohana has a couple different versions to choose from. <?php echo html::anchor('versions','Which versions should I use?')?></p>
+			<p>Kohana has a couple different versions to choose from. <?php echo html::anchor(Route::get('page')->uri(array('lang'=>$request->param('lang'), 'action'=>'versions')),'Which versions should I use?')?></p>
 			<div class="download-2x">
 				<h4>Kohana 2.x</h4>
 				<ul>

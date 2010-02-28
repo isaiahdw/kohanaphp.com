@@ -75,7 +75,8 @@ h4 { color: #113C32; margin: 0.4em 0 0.5em; }
 			background:none;
 		}
 			#topline #quicklinks li.first a { width:59px; height:13px; background: transparent url('../img/kohana-small.png') 0 0 no-repeat; }
-			#topline #quicklinks li.first.active a { background: transparent url('../img/kohana-small-active.png') 0 0 no-repeat; }
+			#topline #quicklinks li.first.active a,
+			#topline #quicklinks li.first a:hover { background-position:0 -20px; }
 
 		#topline #quicklinks li.active a {
 			color:#ED900E;

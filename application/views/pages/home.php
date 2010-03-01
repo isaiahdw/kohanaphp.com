@@ -115,7 +115,7 @@
 			<h3>Stay Informed</h3>
 			<ul>
 				<li><a id="rss_feed" href="#">RSS News Feed</a></li>
-				<li id="follow_twitter">Follow Us on Twitter</li>
+				<li id="follow_twitter"><a href="http://twitter.com/kohanaphp">Follow Us on Twitter</a></li>
 			</ul>
 		</div>
 	</div>
